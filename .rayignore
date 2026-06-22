@@ -1,0 +1,7 @@
+# .rayignore
+.git/
+*.out
+slurm-*.out
+data/tabmwp/*.jsonl
+checkpoints/
+logs/

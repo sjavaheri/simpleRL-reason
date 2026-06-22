@@ -104,6 +104,7 @@ class vLLMRollout(BaseRollout):
             disable_log_stats=config.disable_log_stats,
             max_num_batched_tokens=max_num_batched_tokens,
             enable_chunked_prefill=config.enable_chunked_prefill,
+            disable_custom_all_reduce=config.get('disable_custom_all_reduce', False),
         )
 
         # Offload vllm model to reduce peak memory usage
@@ -135,9 +136,9 @@ class vLLMRollout(BaseRollout):
                     kwargs['stop_token_ids'] = [151645, 151643, 872, 77091, 1474, 71703, 151644, 8948, 73594]
                     
             elif "1.5b" in config.model_path.lower():
-                kwargs['stop_token_ids'] = [14582, 16141, 31198] # Question, Answer, Problem
+                kwargs['stop_token_ids'] = [151645, 151643, 151644, 14582, 16141, 31198] # Combined EOS, Question, Answer, Problem
             elif "0.5b" in config.model_path.lower():
-                kwargs['stop_token_ids'] = [14582, 16141, 31198] # Question, Answer, Problem
+                kwargs['stop_token_ids'] = [151645, 151643, 151644, 14582, 16141, 31198] # Combined EOS, Question, Answer, Problem
         else:
             raise NotImplementedError(f"Stop token ids for model path '{config.model_path}' are not implemented")
                 

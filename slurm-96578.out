@@ -1,0 +1,343 @@
+Virtualenv at /scratch-ssd/ms25sstj/simpleRL-reason activated
+Using Python 3.10.19 environment at: /scratch-ssd/ms25sstj/simpleRL-reason
+Audited 4 packages in 9ms
+Using Python 3.10.19 environment at: /scratch-ssd/ms25sstj/simpleRL-reason
+Audited 1 package in 8ms
+Using Python 3.10.19 environment at: /scratch-ssd/ms25sstj/simpleRL-reason
+Audited 1 package in 7ms
+Using Python 3.10.19 environment at: /scratch-ssd/ms25sstj/simpleRL-reason
+Audited 1 package in 17ms
+Using Python 3.10.19 environment at: /scratch-ssd/ms25sstj/simpleRL-reason
+Resolved 20 packages in 164ms
+Uninstalled 1 package in 2ms
+Installed 1 package in 9ms
+ - click==8.1.7
+ + click==8.4.1
+Using Python 3.10.19 environment at: /scratch-ssd/ms25sstj/simpleRL-reason
+Resolved 154 packages in 2.15s
+   Building verl @ file:///auto/users/ms25sstj/projects/simpleRL-reason
+      Built verl @ file:///auto/users/ms25sstj/projects/simpleRL-reason
+Prepared 1 package in 776ms
+Uninstalled 1 package in 1ms
+Installed 1 package in 1ms
+ ~ verl==0.1 (from file:///auto/users/ms25sstj/projects/simpleRL-reason)
+Using Python 3.10.19 environment at: /scratch-ssd/ms25sstj/simpleRL-reason
+Resolved 1 package in 4ms
+Uninstalled 1 package in 1ms
+Installed 1 package in 10ms
+ - click==8.4.1
+ + click==8.1.7
+2026-06-19 23:44:28,841	INFO usage_lib.py:469 -- Usage stats collection is enabled by default without user confirmation because this terminal is detected to be non-interactive. To disable this, add `--disable-usage-stats` to the command that starts the cluster, or run the following command: `ray disable-usage-stats` before starting the cluster. See https://docs.ray.io/en/master/cluster/usage-stats.html for more details.
+2026-06-19 23:44:28,842	INFO scripts.py:763 -- [37mLocal node IP[39m: [1m129.67.150.225[22m
+2026-06-19 23:44:32,659	SUCC scripts.py:800 -- [32m--------------------[39m
+2026-06-19 23:44:32,660	SUCC scripts.py:801 -- [32mRay runtime started.[39m
+2026-06-19 23:44:32,660	SUCC scripts.py:802 -- [32m--------------------[39m
+2026-06-19 23:44:32,660	INFO scripts.py:804 -- [36mNext steps[39m
+2026-06-19 23:44:32,660	INFO scripts.py:807 -- To add another node to this Ray cluster, run
+2026-06-19 23:44:32,660	INFO scripts.py:810 -- [1m  ray start --address='129.67.150.225:6379'[22m
+2026-06-19 23:44:32,660	INFO scripts.py:819 -- To connect to this Ray cluster:
+2026-06-19 23:44:32,661	INFO scripts.py:821 -- [35mimport[39m[26m ray
+2026-06-19 23:44:32,661	INFO scripts.py:822 -- ray[35m.[39m[26minit(_node_ip_address[35m=[39m[26m[33m'129.67.150.225'[39m[26m)
+2026-06-19 23:44:32,661	INFO scripts.py:834 -- To submit a Ray job using the Ray Jobs CLI:
+2026-06-19 23:44:32,661	INFO scripts.py:835 -- [1m  RAY_ADDRESS='http://127.0.0.1:8265' ray job submit --working-dir . -- python my_script.py[22m
+2026-06-19 23:44:32,661	INFO scripts.py:844 -- See https://docs.ray.io/en/latest/cluster/running-applications/job-submission/index.html 
+2026-06-19 23:44:32,661	INFO scripts.py:848 -- for more information on submitting Ray jobs to the Ray cluster.
+2026-06-19 23:44:32,661	INFO scripts.py:853 -- To terminate the Ray runtime, run
+2026-06-19 23:44:32,661	INFO scripts.py:854 -- [1m  ray stop[22m
+2026-06-19 23:44:32,661	INFO scripts.py:857 -- To view the status of the cluster, use
+2026-06-19 23:44:32,661	INFO scripts.py:858 --   [1mray status[22m[26m
+2026-06-19 23:44:32,661	INFO scripts.py:862 -- To monitor and debug Ray, view the dashboard at 
+2026-06-19 23:44:32,661	INFO scripts.py:863 --   [1m127.0.0.1:8265[22m[26m
+2026-06-19 23:44:32,662	INFO scripts.py:870 -- [4mIf connection to the dashboard fails, check your firewall settings and network configuration.[24m
++ export NCCL_DEBUG=WARN
++ NCCL_DEBUG=WARN
++ export RAY_BACKEND_LOG_LEVEL=error
++ RAY_BACKEND_LOG_LEVEL=error
++ export RAY_DEDUP_LOGS=1
++ RAY_DEDUP_LOGS=1
++ export PROJECT_NAME=verl_train
++ PROJECT_NAME=verl_train
++ export WANDB_API_KEY=ae5357c956169358a187cc70668d0b78265e6412
++ WANDB_API_KEY=ae5357c956169358a187cc70668d0b78265e6412
++ export WANDB_OFFICIAL=1
++ WANDB_OFFICIAL=1
++ export HDFS_DATA_PATH=/scratch-ssd/ms25sstj
++ HDFS_DATA_PATH=/scratch-ssd/ms25sstj
++ export HDFS_MODEL_PATH=Qwen
++ HDFS_MODEL_PATH=Qwen
++ export HDFS_CHECKPOINT_PATH=/scratch-ssd/ms25sstj/checkpoints
++ HDFS_CHECKPOINT_PATH=/scratch-ssd/ms25sstj/checkpoints
++ export HDFS_LOG_PATH=/scratch-ssd/ms25sstj/logs
++ HDFS_LOG_PATH=/scratch-ssd/ms25sstj/logs
++ export RUN_NAME=verl-grpo
++ RUN_NAME=verl-grpo
++ export ARNOLD_WORKER_NUM=1
++ ARNOLD_WORKER_NUM=1
++ TRAIN_BATCH_SIZE=256
++ VAL_BATCH_SIZE=256
++ MAX_PROMPT_LENGTH=1024
++ MAX_RESPONSE_LENGTH=3072
++ LEARNING_RATE=5e-7
++ PPO_MINI_BATCH_SIZE=256
++ PPO_MICRO_BATCH_SIZE=2
++ CLIP_RATIO=0.2
++ KL_LOSS_COEF=0.001
++ ENTROPY_COEFFIENT=0.001
++ KL_LOSS_TYPE=low_var_kl
++ TEMPERATURE=1.0
++ LOG_PROB_MICRO_BATCH_SIZE=160
++ ROLLOUT_N=8
++ KL_COEF=0.001
++ TOTAL_EPOCHS=20
++ DATASET_NAME=simplelr_math_35
++ ROLLOUT_GPU_MEMORY_UTIL=0.6
++ MODEL_NAME=Qwen2.5-Math-7B
++ SAVE_FREQ=20
++ TEST_FREQ=5
++ REMOVE_CLIP=False
++ ROLLOUT_TENSOR_MODEL_PARALLEL_SIZE=1
++ MICRO_ROLLOUT_BATCH_SIZE=256
++ REMOVE_PREVIOUS_CKPT=False
++ echo 'Arguments received: --model_name' Qwen2.5-0.5B --dataset_name simplelr_qwen_level1to4 --max_response_length 4096 --train_batch_size 1024 --rollout_n 8 --kl_loss_coef 0.0001 --entropy_coeffient 0.001 --rollout_gpu_memory_util 0.6 --rollout_tp 2 --save_freq 5 --micro_rollout_batch_size 64
+Arguments received: --model_name Qwen2.5-0.5B --dataset_name simplelr_qwen_level1to4 --max_response_length 4096 --train_batch_size 1024 --rollout_n 8 --kl_loss_coef 0.0001 --entropy_coeffient 0.001 --rollout_gpu_memory_util 0.6 --rollout_tp 2 --save_freq 5 --micro_rollout_batch_size 64
+++ generate_suffix --model_name Qwen2.5-0.5B --dataset_name simplelr_qwen_level1to4 --max_response_length 4096 --train_batch_size 1024 --rollout_n 8 --kl_loss_coef 0.0001 --entropy_coeffient 0.001 --rollout_gpu_memory_util 0.6 --rollout_tp 2 --save_freq 5 --micro_rollout_batch_size 64
+++ local suffix=
+++ local dataset_provided=false
+++ local model_provided=false
+++ local suffix_provided=false
+++ [[ 22 -gt 0 ]]
+++ case $1 in
+++ suffix+=_Qwen2.5-0.5B
+++ model_provided=true
+++ shift 2
+++ [[ 20 -gt 0 ]]
+++ case $1 in
+++ suffix+=_simplelr_qwen_level1to4
+++ dataset_provided=true
+++ shift 2
+++ [[ 18 -gt 0 ]]
+++ case $1 in
+++ suffix+=_max_response4096
+++ shift 2
+++ [[ 16 -gt 0 ]]
+++ case $1 in
+++ suffix+=_batch1024
+++ shift 2
+++ [[ 14 -gt 0 ]]
+++ case $1 in
+++ suffix+=_rollout8
+++ shift 2
+++ [[ 12 -gt 0 ]]
+++ case $1 in
+++ suffix+=_klcoef0.0001
+++ shift 2
+++ [[ 10 -gt 0 ]]
+++ case $1 in
+++ suffix+=_entcoef0.001
+++ shift 2
+++ [[ 8 -gt 0 ]]
+++ case $1 in
+++ shift 2
+++ [[ 6 -gt 0 ]]
+++ case $1 in
+++ shift
+++ [[ 5 -gt 0 ]]
+++ case $1 in
+++ shift
+++ [[ 4 -gt 0 ]]
+++ case $1 in
+++ shift
+++ [[ 3 -gt 0 ]]
+++ case $1 in
+++ shift
+++ [[ 2 -gt 0 ]]
+++ case $1 in
+++ shift
+++ [[ 1 -gt 0 ]]
+++ case $1 in
+++ shift
+++ [[ 0 -gt 0 ]]
+++ '[' true = false ']'
+++ '[' true = false ']'
+++ '[' false = true ']'
+++ echo _Qwen2.5-0.5B_simplelr_qwen_level1to4_max_response4096_batch1024_rollout8_klcoef0.0001_entcoef0.001
++ SUFFIX=_Qwen2.5-0.5B_simplelr_qwen_level1to4_max_response4096_batch1024_rollout8_klcoef0.0001_entcoef0.001
++ RUN_NAME=verl-grpo_Qwen2.5-0.5B_simplelr_qwen_level1to4_max_response4096_batch1024_rollout8_klcoef0.0001_entcoef0.001
++ LOG_FILE_PATH=/scratch-ssd/ms25sstj/logs/verl-grpo_Qwen2.5-0.5B_simplelr_qwen_level1to4_max_response4096_batch1024_rollout8_klcoef0.0001_entcoef0.001.log
++ [[ 22 -gt 0 ]]
++ echo 'Processing: --model_name'
+Processing: --model_name
++ case "$1" in
++ MODEL_NAME=Qwen2.5-0.5B
++ shift 2
++ [[ 20 -gt 0 ]]
++ echo 'Processing: --dataset_name'
+Processing: --dataset_name
++ case "$1" in
++ DATASET_NAME=simplelr_qwen_level1to4
++ shift 2
++ [[ 18 -gt 0 ]]
++ echo 'Processing: --max_response_length'
+Processing: --max_response_length
++ case "$1" in
++ MAX_RESPONSE_LENGTH=4096
++ shift 2
++ [[ 16 -gt 0 ]]
++ echo 'Processing: --train_batch_size'
+Processing: --train_batch_size
++ case "$1" in
++ TRAIN_BATCH_SIZE=1024
++ shift 2
++ [[ 14 -gt 0 ]]
++ echo 'Processing: --rollout_n'
+Processing: --rollout_n
++ case "$1" in
++ ROLLOUT_N=8
++ shift 2
++ [[ 12 -gt 0 ]]
++ echo 'Processing: --kl_loss_coef'
+Processing: --kl_loss_coef
++ case "$1" in
++ KL_LOSS_COEF=0.0001
++ shift 2
++ [[ 10 -gt 0 ]]
++ echo 'Processing: --entropy_coeffient'
+Processing: --entropy_coeffient
++ case "$1" in
++ ENTROPY_COEFFIENT=0.001
++ shift 2
++ [[ 8 -gt 0 ]]
++ echo 'Processing: --rollout_gpu_memory_util'
+Processing: --rollout_gpu_memory_util
++ case "$1" in
++ ROLLOUT_GPU_MEMORY_UTIL=0.6
++ shift 2
++ [[ 6 -gt 0 ]]
++ echo 'Processing: --rollout_tp'
+Processing: --rollout_tp
++ case "$1" in
++ ROLLOUT_TENSOR_MODEL_PARALLEL_SIZE=2
++ shift 2
++ [[ 4 -gt 0 ]]
++ echo 'Processing: --save_freq'
+Processing: --save_freq
++ case "$1" in
++ SAVE_FREQ=5
++ shift 2
++ [[ 2 -gt 0 ]]
++ echo 'Processing: --micro_rollout_batch_size'
+Processing: --micro_rollout_batch_size
++ case "$1" in
++ MICRO_ROLLOUT_BATCH_SIZE=64
++ shift 2
++ [[ 0 -gt 0 ]]
++ echo 'Training with the following parameters:'
+Training with the following parameters:
++ echo 'Train Batch Size: 1024'
+Train Batch Size: 1024
++ echo 'Val Batch Size: 256'
+Val Batch Size: 256
++ echo 'Max Prompt Length: 1024'
+Max Prompt Length: 1024
++ echo 'Max Response Length: 4096'
+Max Response Length: 4096
++ echo 'Learning Rate: 5e-7'
+Learning Rate: 5e-7
++ echo 'PPO Mini Batch Size: 256'
+PPO Mini Batch Size: 256
++ echo 'PPO Micro Batch Size: 2'
+PPO Micro Batch Size: 2
++ echo 'Micro Rollout Batch Size: 64'
+Micro Rollout Batch Size: 64
++ echo 'KL Loss Coefficient: 0.0001'
+KL Loss Coefficient: 0.0001
++ echo 'KL Loss Type: low_var_kl'
+KL Loss Type: low_var_kl
++ echo 'Temperature: 1.0'
+Temperature: 1.0
++ echo 'Rollout N: 8'
+Rollout N: 8
++ echo 'KL Coefficient: 0.001'
+KL Coefficient: 0.001
++ echo 'Total Epochs: 20'
+Total Epochs: 20
++ echo 'Dataset Name: simplelr_qwen_level1to4'
+Dataset Name: simplelr_qwen_level1to4
++ echo 'Model Name: Qwen2.5-0.5B'
+Model Name: Qwen2.5-0.5B
++ echo 'Remove Clip: False'
+Remove Clip: False
++ echo 'Remove Previous Ckpt: False'
+Remove Previous Ckpt: False
++ echo 'LOG FILE PATH: /scratch-ssd/ms25sstj/logs/verl-grpo_Qwen2.5-0.5B_simplelr_qwen_level1to4_max_response4096_batch1024_rollout8_klcoef0.0001_entcoef0.001.log'
+LOG FILE PATH: /scratch-ssd/ms25sstj/logs/verl-grpo_Qwen2.5-0.5B_simplelr_qwen_level1to4_max_response4096_batch1024_rollout8_klcoef0.0001_entcoef0.001.log
+++ expr 1024 + 4096 + 1000
++ max_num_batched_tokens=6120
++ echo -e 'Training with the following parameters:\nTrain Batch Size: 1024\nVal Batch Size: 256\nMax Prompt Length: 1024\nMax Response Length: 4096\nLearning Rate: 5e-7\nPPO Mini Batch Size: 256\nPPO Micro Batch Size: 2\nKL Loss Coefficient: 0.0001\nKL Loss Type: low_var_kl\nTemperature: 1.0\nRollout N: 8\nKL Coefficient: 0.001\nTotal Epochs: 20\nDataset Name: simplelr_qwen_level1to4\nModel Name: Qwen2.5-0.5B'
+Training with the following parameters:
+Train Batch Size: 1024
+Val Batch Size: 256
+Max Prompt Length: 1024
+Max Response Length: 4096
+Learning Rate: 5e-7
+PPO Mini Batch Size: 256
+PPO Micro Batch Size: 2
+KL Loss Coefficient: 0.0001
+KL Loss Type: low_var_kl
+Temperature: 1.0
+Rollout N: 8
+KL Coefficient: 0.001
+Total Epochs: 20
+Dataset Name: simplelr_qwen_level1to4
+Model Name: Qwen2.5-0.5B
++ tee -a /scratch-ssd/ms25sstj/logs/verl-grpo_Qwen2.5-0.5B_simplelr_qwen_level1to4_max_response4096_batch1024_rollout8_klcoef0.0001_entcoef0.001.log
++ ray job submit --address=127.0.0.1:6379 --entrypoint-num-cpus=1 '--runtime-env-json={
+        "working_dir": "",
+        "excludes": [".git", "slurm-*.out", "*.out", "data/**/*.jsonl"], 
+        "env_vars": {
+          "http_proxy": "",
+          "https_proxy": "",
+          "NCCL_P2P_DISABLE": "1",
+          "MASTER_ADDR": "127.0.0.1"
+        }
+    }' -- python -m verl.trainer.main_ppo algorithm.adv_estimator=grpo data.train_files=/scratch-ssd/ms25sstj/simplelr_qwen_level1to4/train.parquet data.val_files=/scratch-ssd/ms25sstj/simplelr_qwen_level1to4/test.parquet data.train_batch_size=1024 data.val_batch_size=256 data.max_prompt_length=1024 data.max_response_length=4096 actor_rollout_ref.model.path=Qwen/Qwen2.5-0.5B actor_rollout_ref.actor.optim.lr=5e-7 actor_rollout_ref.model.use_remove_padding=True actor_rollout_ref.actor.ppo_mini_batch_size=256 actor_rollout_ref.actor.ppo_micro_batch_size_per_gpu=2 actor_rollout_ref.actor.use_kl_loss=True actor_rollout_ref.actor.kl_loss_coef=0.0001 actor_rollout_ref.actor.entropy_coeff=0.001 actor_rollout_ref.actor.clip_ratio=0.2 actor_rollout_ref.actor.kl_loss_type=low_var_kl actor_rollout_ref.model.enable_gradient_checkpointing=True actor_rollout_ref.actor.fsdp_config.param_offload=False actor_rollout_ref.actor.fsdp_config.grad_offload=False actor_rollout_ref.actor.fsdp_config.optimizer_offload=False actor_rollout_ref.rollout.temperature=1.0 actor_rollout_ref.rollout.log_prob_micro_batch_size=160 actor_rollout_ref.rollout.tensor_model_parallel_size=2 actor_rollout_ref.rollout.name=vllm actor_rollout_ref.rollout.gpu_memory_utilization=0.6 actor_rollout_ref.rollout.n=8 actor_rollout_ref.rollout.enable_chunked_prefill=False actor_rollout_ref.rollout.disable_custom_all_reduce=True actor_rollout_ref.rollout.free_cache_engine=False actor_rollout_ref.rollout.max_num_batched_tokens=6120 actor_rollout_ref.rollout.micro_rollout_batch_size=64 actor_rollout_ref.ref.log_prob_micro_batch_size=160 actor_rollout_ref.ref.fsdp_config.param_offload=True algorithm.kl_ctrl.kl_coef=0.001 critic.ppo_micro_batch_size_per_gpu=4 trainer.critic_warmup=0 'trainer.logger=[console,wandb]' trainer.project_name=verl_train trainer.remove_previous_ckpt=False trainer.experiment_name=verl-grpo_Qwen2.5-0.5B_simplelr_qwen_level1to4_max_response4096_batch1024_rollout8_klcoef0.0001_entcoef0.001 trainer.n_gpus_per_node=4 trainer.nnodes=1 trainer.remove_clip=False trainer.save_freq=5 trainer.test_freq=5 trainer.default_local_dir=/scratch-ssd/ms25sstj/checkpoints/verl-grpo_Qwen2.5-0.5B_simplelr_qwen_level1to4_max_response4096_batch1024_rollout8_klcoef0.0001_entcoef0.001 trainer.total_epochs=20
+2026-06-19 23:44:37,981	INFO dashboard_sdk.py:338 -- Uploading package gcs://_ray_pkg_2c4e77556ec4bcee.zip.
+2026-06-19 23:44:37,982	INFO packaging.py:530 -- Creating a file package for local directory ''.
+2026-06-19 23:44:38,242	WARNING packaging.py:405 -- File /auto/users/ms25sstj/projects/simpleRL-reason/examples/simplelr_math_eval/data/tabmwp/test.jsonl is very large (17.38MiB). Consider adding this file to the 'excludes' list to skip uploading it: `ray.init(..., runtime_env={'excludes': ['/auto/users/ms25sstj/projects/simpleRL-reason/examples/simplelr_math_eval/data/tabmwp/test.jsonl']})`
+2026-06-19 23:44:34,896	INFO cli.py:36 -- [37mJob submission server address[39m: [1mhttp://127.0.0.1:8265[22m
+2026-06-19 23:44:50,402	SUCC cli.py:60 -- [32m-------------------------------------------------------[39m
+2026-06-19 23:44:50,402	SUCC cli.py:61 -- [32mJob 'raysubmit_igbKYftJ5WYcMySe' submitted successfully[39m
+2026-06-19 23:44:50,402	SUCC cli.py:62 -- [32m-------------------------------------------------------[39m
+2026-06-19 23:44:50,402	INFO cli.py:285 -- [36mNext steps[39m
+2026-06-19 23:44:50,402	INFO cli.py:286 -- Query the logs of the job:
+2026-06-19 23:44:50,402	INFO cli.py:288 -- [1mray job logs raysubmit_igbKYftJ5WYcMySe[22m
+2026-06-19 23:44:50,402	INFO cli.py:290 -- Query the status of the job:
+2026-06-19 23:44:50,402	INFO cli.py:292 -- [1mray job status raysubmit_igbKYftJ5WYcMySe[22m
+2026-06-19 23:44:50,402	INFO cli.py:294 -- Request the job to be stopped:
+2026-06-19 23:44:50,402	INFO cli.py:296 -- [1mray job stop raysubmit_igbKYftJ5WYcMySe[22m
+2026-06-19 23:44:50,406	INFO cli.py:303 -- Tailing logs until the job exits (disable with --no-wait):
+WARNING:2026-06-19 23:44:58,389:Initialized ProcessPoolExecutor with 16 workers
+Reward function type: mix
+Format penalty value: -1.0
+Could not override 'actor_rollout_ref.rollout.disable_custom_all_reduce'.
+To append to your config use +actor_rollout_ref.rollout.disable_custom_all_reduce=True
+Key 'disable_custom_all_reduce' is not in struct
+    full_key: actor_rollout_ref.rollout.disable_custom_all_reduce
+    object_type=dict
+
+Set the environment variable HYDRA_FULL_ERROR=1 for a complete stack trace.
+2026-06-19 23:45:00,546	ERR cli.py:68 -- [31m---------------------------------------[39m
+2026-06-19 23:45:00,546	ERR cli.py:69 -- [31mJob 'raysubmit_igbKYftJ5WYcMySe' failed[39m
+2026-06-19 23:45:00,546	ERR cli.py:70 -- [31m---------------------------------------[39m
+2026-06-19 23:45:00,546	INFO cli.py:83 -- Status message: Job entrypoint command failed with exit code 1, last available logs (truncated to 20,000 chars):
+WARNING:2026-06-19 23:44:58,389:Initialized ProcessPoolExecutor with 16 workers
+Reward function type: mix
+Format penalty value: -1.0
+Could not override 'actor_rollout_ref.rollout.disable_custom_all_reduce'.
+To append to your config use +actor_rollout_ref.rollout.disable_custom_all_reduce=True
+Key 'disable_custom_all_reduce' is not in struct
+    full_key: actor_rollout_ref.rollout.disable_custom_all_reduce
+    object_type=dict
+
+Set the environment variable HYDRA_FULL_ERROR=1 for a complete stack trace.
+

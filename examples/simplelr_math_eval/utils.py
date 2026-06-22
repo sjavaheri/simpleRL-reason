@@ -95,8 +95,7 @@ PROMPT_TEMPLATES = {
         "\n\n\n",
     ),
     "deepseek-math": (
-        "User: {input}\nPlease reason step by step, "
-        "and put your final answer within \\boxed{{}}.\n\nAssistant:",
+        "User: {input}\nPlease reason step by step, " "and put your final answer within \\boxed{{}}.\n\nAssistant:",
         "{output}",
         "\n\n\n",
     ),
@@ -131,13 +130,14 @@ PROMPT_TEMPLATES = {
         "\n\n",
     ),
     "shepherd": ("{input}\n", "{output}", "\n\n\n"),
-    "qwen-boxed": (
-        "<|im_start|>system\nYou are a helpful assistant.<|im_end|>\n"
-        "<|im_start|>user\n{input}\nPlease reason step by step, and put your final answer within \\boxed{{}}.<|im_end|>\n"
-        "<|im_start|>assistant\n",
-        "{output}",
-        "\n\n",
-    ),
+    "qwen-boxed": ("Question: {input}\nAnswer: ", "{output}", "\n\n"),
+    # "qwen-boxed": (
+    #     "<|im_start|>system\nYou are a helpful assistant.<|im_end|>\n"
+    #     "<|im_start|>user\n{input}\nPlease reason step by step, and put your final answer within \\boxed{{}}.<|im_end|>\n"
+    #     "<|im_start|>assistant\n",
+    #     "{output}",
+    #     "\n\n",
+    # ),
     "qwen25-math-cot": (
         "<|im_start|>system\nPlease reason step by step, and put your final answer within \\boxed{{}}.<|im_end|>\n"
         "<|im_start|>user\n{input}<|im_end|>\n"
@@ -163,14 +163,14 @@ PROMPT_TEMPLATES = {
     ),
     "numina": ("### Problem: {input}\n### Solution:", " {output}", "\n\n"),
     "o1_cot": (
-        '[Round 0] USER:\n{input}\nPlease reason step by step, and put your final answer within \\boxed{{}}. ASSISTANT:\n',
+        "[Round 0] USER:\n{input}\nPlease reason step by step, and put your final answer within \\boxed{{}}. ASSISTANT:\n",
         "{output}",
-        "\n\n"
+        "\n\n",
     ),
     "deepseek-r1": (
-        'A conversation between User and Assistant. The user asks a question, and the Assistant solves it. The assistant first thinks about the reasoning process in the mind and then provides the user with the answer. The reasoning process and answer are enclosed within <think> </think> and <answer> </answer> tags, respectively, i.e., <think> reasoning process here </think> <answer> answer here </answer>. User: {input}. Assistant:',
+        "A conversation between User and Assistant. The user asks a question, and the Assistant solves it. The assistant first thinks about the reasoning process in the mind and then provides the user with the answer. The reasoning process and answer are enclosed within <think> </think> and <answer> </answer> tags, respectively, i.e., <think> reasoning process here </think> <answer> answer here </answer>. User: {input}. Assistant:",
         "{output}",
-        "\n\n"
+        "\n\n",
     ),
 }
 
@@ -205,15 +205,10 @@ def construct_prompt(example, data_name, args):
         demo_prompt = splitter.join([q + "\n" + a for q, a in demos])
     else:
         demo_prompt = splitter.join(
-            [
-                input_template.format(input=q) + output_template.format(output=a)
-                for q, a in demos
-            ]
+            [input_template.format(input=q) + output_template.format(output=a) for q, a in demos]
         )
     context = input_template.format(input=example["question"])
-    if len(demo_prompt) == 0 or (
-        args.adapt_few_shot and example["gt_ans"] not in ["A", "B", "C", "D", "E"]
-    ):
+    if len(demo_prompt) == 0 or (args.adapt_few_shot and example["gt_ans"] not in ["A", "B", "C", "D", "E"]):
         full_prompt = context
     else:
         if args.prompt_type == "qwen25-math-cot":
@@ -243,8 +238,7 @@ Here are some examples you may refer to:
 
 ---
 
-"""
-            + full_prompt
+""" + full_prompt
         )
 
     return full_prompt.strip(" ")  # important!

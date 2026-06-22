@@ -1,0 +1,815 @@
+ Virtualenv not found. Creating and activating a new one with uv
+Using CPython 3.10.19
+Creating virtual environment at: /scratch-ssd/ms25sstj/simpleRL-reason
+Activate with: source /scratch-ssd/ms25sstj/simpleRL-reason/bin/activate
+Using Python 3.10.19 environment at: /scratch-ssd/ms25sstj/simpleRL-reason
+Resolved 4 packages in 34ms
+Installed 4 packages in 8ms
+ + ninja==1.13.0
+ + packaging==26.2
+ + setuptools==82.0.1
+ + wheel==0.47.0
+Using Python 3.10.19 environment at: /scratch-ssd/ms25sstj/simpleRL-reason
+Resolved 22 packages in 1.17s
+Installed 22 packages in 131ms
+ + filelock==3.29.0
+ + fsspec==2026.4.0
+ + jinja2==3.1.6
+ + markupsafe==3.0.3
+ + mpmath==1.3.0
+ + networkx==3.4.2
+ + nvidia-cublas-cu12==12.4.2.65
+ + nvidia-cuda-cupti-cu12==12.4.99
+ + nvidia-cuda-nvrtc-cu12==12.4.99
+ + nvidia-cuda-runtime-cu12==12.4.99
+ + nvidia-cudnn-cu12==9.1.0.70
+ + nvidia-cufft-cu12==11.2.0.44
+ + nvidia-curand-cu12==10.3.5.119
+ + nvidia-cusolver-cu12==11.6.0.99
+ + nvidia-cusparse-cu12==12.3.0.142
+ + nvidia-nccl-cu12==2.20.5
+ + nvidia-nvjitlink-cu12==12.4.99
+ + nvidia-nvtx-cu12==12.4.99
+ + sympy==1.14.0
+ + torch==2.4.0+cu124
+ + triton==3.0.0
+ + typing-extensions==4.15.0
+Using Python 3.10.19 environment at: /scratch-ssd/ms25sstj/simpleRL-reason
+Resolved 24 packages in 132ms
+Installed 2 packages in 4ms
+ + einops==0.8.2
+ + flash-attn==2.8.3.post1
+Using Python 3.10.19 environment at: /scratch-ssd/ms25sstj/simpleRL-reason
+Resolved 118 packages in 307ms
+Downloading cmake (28.2MiB)
+Downloading vllm (118.4MiB)
+Downloading openai (1.3MiB)
+Downloading vllm-flash-attn (72.3MiB)
+ Downloaded openai
+ Downloaded cmake
+ Downloaded vllm
+ Downloaded vllm-flash-attn
+Prepared 9 packages in 3.63s
+Installed 94 packages in 69ms
+ + aiohappyeyeballs==2.6.2
+ + aiohttp==3.14.1
+ + aiosignal==1.4.0
+ + annotated-doc==0.0.4
+ + annotated-types==0.7.0
+ + anyio==4.14.0
+ + async-timeout==5.0.1
+ + attrs==26.1.0
+ + certifi==2026.6.17
+ + charset-normalizer==3.4.7
+ + click==8.4.1
+ + cloudpickle==3.1.2
+ + cmake==4.3.4
+ + datasets==5.0.0
+ + dill==0.4.1
+ + diskcache==5.6.3
+ + distro==1.9.0
+ + exceptiongroup==1.3.1
+ + fastapi==0.138.0
+ + frozenlist==1.8.0
+ + h11==0.16.0
+ + hf-xet==1.5.1
+ + httpcore==1.0.9
+ + httptools==0.8.0
+ + httpx==0.28.1
+ + huggingface-hub==1.20.1
+ + idna==3.18
+ + interegular==0.3.3
+ + jiter==0.15.0
+ + jsonschema==4.26.0
+ + jsonschema-specifications==2025.9.1
+ + lark==1.3.1
+ + llvmlite==0.47.0
+ + lm-format-enforcer==0.10.3
+ + markdown-it-py==4.2.0
+ + mdurl==0.1.2
+ + msgpack==1.2.1
+ + multidict==6.7.1
+ + multiprocess==0.70.19
+ + nest-asyncio==1.6.0
+ + numba==0.65.1
+ + numpy==1.26.4
+ + nvidia-ml-py==13.610.43
+ + openai==2.43.0
+ + outlines==0.0.46
+ + pandas==2.3.3
+ + pillow==12.2.0
+ + prometheus-client==0.25.0
+ + prometheus-fastapi-instrumentator==8.0.0
+ + propcache==0.5.2
+ + protobuf==7.35.1
+ + psutil==7.2.2
+ + py-cpuinfo==9.0.0
+ + pyairports==0.0.1
+ + pyarrow==24.0.0
+ + pycountry==26.2.16
+ + pydantic==2.13.4
+ + pydantic-core==2.46.4
+ + pygments==2.20.0
+ + python-dateutil==2.9.0.post0
+ + python-dotenv==1.2.2
+ + pytz==2026.2
+ + pyyaml==6.0.3
+ + pyzmq==27.1.0
+ + ray==2.55.1
+ + referencing==0.37.0
+ + regex==2026.5.9
+ + requests==2.34.2
+ + rich==15.0.0
+ + rpds-py==0.30.0
+ + safetensors==0.8.0
+ + sentencepiece==0.2.1
+ + shellingham==1.5.4
+ + six==1.17.0
+ + sniffio==1.3.1
+ + starlette==1.3.1
+ + tiktoken==0.13.0
+ + tokenizers==0.22.2
+ + torchvision==0.19.0
+ + tqdm==4.68.3
+ + transformers==5.12.1
+ + typer==0.25.1
+ + typing-inspection==0.4.2
+ + tzdata==2026.2
+ + urllib3==2.7.0
+ + uvicorn==0.49.0
+ + uvloop==0.22.1
+ + vllm==0.5.4
+ + vllm-flash-attn==2.6.1
+ + watchfiles==1.2.0
+ + websockets==16.0
+ + xformers==0.0.27.post2
+ + xxhash==3.7.0
+ + yarl==1.24.2
+Using Python 3.10.19 environment at: /scratch-ssd/ms25sstj/simpleRL-reason
+Resolved 20 packages in 119ms
+Installed 6 packages in 13ms
+ + gitdb==4.0.12
+ + gitpython==3.1.50
+ + platformdirs==4.10.0
+ + sentry-sdk==2.63.0
+ + smmap==5.0.3
+ + wandb==0.27.2
+Using Python 3.10.19 environment at: /scratch-ssd/ms25sstj/simpleRL-reason
+Resolved 150 packages in 1.65s
+   Building verl @ file:///auto/users/ms25sstj/projects/simpleRL-reason
+      Built verl @ file:///auto/users/ms25sstj/projects/simpleRL-reason
+Prepared 1 package in 822ms
+Uninstalled 4 packages in 149ms
+Installed 41 packages in 74ms
+ + accelerate==1.14.0
+ + aiohttp-cors==0.8.1
+ + antlr4-python3-runtime==4.11.0
+ + cffi==2.0.0
+ + codetiming==1.4.0
+ + colorful==0.5.8
+ + cryptography==49.0.0
+ + distlib==0.4.3
+ + google-api-core==2.31.0
+ + google-auth==2.55.0
+ + googleapis-common-protos==1.75.0
+ + grpcio==1.81.1
+ - huggingface-hub==1.20.1
+ + huggingface-hub==0.36.2
+ + hydra-core==1.4.0.dev1
+ + importlib-metadata==9.0.0
+ + latex2sympy2-extended==1.0.9
+ + liger-kernel==0.8.0
+ + math-verify==0.6.0
+ + omegaconf==2.4.0.dev3
+ + opencensus==0.11.4
+ + opencensus-context==0.1.3
+ + orjson==3.11.9
+ + peft==0.19.1
+ + proto-plus==1.28.0
+ + py-spy==0.4.2
+ + pyasn1==0.6.3
+ + pyasn1-modules==0.4.2
+ + pybind11==3.0.4
+ + pycparser==3.0
+ + python-discovery==1.4.2
+ + pyvers==0.2.2
+ - ray==2.55.1
+ + ray==2.10.0
+ + smart-open==7.6.1
+ + tensordict==0.13.0
+ - tokenizers==0.22.2
+ + tokenizers==0.21.4
+ - transformers==5.12.1
+ + transformers==4.47.1
+ + verl==0.1 (from file:///auto/users/ms25sstj/projects/simpleRL-reason)
+ + virtualenv==21.5.1
+ + word2number==1.1
+ + wrapt==2.2.1
+ + zipp==4.1.0
+Using Python 3.10.19 environment at: /scratch-ssd/ms25sstj/simpleRL-reason
+Resolved 1 package in 1ms
+Uninstalled 1 package in 0.50ms
+Installed 1 package in 3ms
+ - click==8.4.1
+ + click==8.1.7
+2026-06-20 23:50:53,214	INFO usage_lib.py:469 -- Usage stats collection is enabled by default without user confirmation because this terminal is detected to be non-interactive. To disable this, add `--disable-usage-stats` to the command that starts the cluster, or run the following command: `ray disable-usage-stats` before starting the cluster. See https://docs.ray.io/en/master/cluster/usage-stats.html for more details.
+2026-06-20 23:50:53,214	INFO scripts.py:763 -- [37mLocal node IP[39m: [1m129.67.150.216[22m
+2026-06-20 23:50:56,187	SUCC scripts.py:800 -- [32m--------------------[39m
+2026-06-20 23:50:56,188	SUCC scripts.py:801 -- [32mRay runtime started.[39m
+2026-06-20 23:50:56,188	SUCC scripts.py:802 -- [32m--------------------[39m
+2026-06-20 23:50:56,188	INFO scripts.py:804 -- [36mNext steps[39m
+2026-06-20 23:50:56,188	INFO scripts.py:807 -- To add another node to this Ray cluster, run
+2026-06-20 23:50:56,188	INFO scripts.py:810 -- [1m  ray start --address='129.67.150.216:6379'[22m
+2026-06-20 23:50:56,188	INFO scripts.py:819 -- To connect to this Ray cluster:
+2026-06-20 23:50:56,189	INFO scripts.py:821 -- [35mimport[39m[26m ray
+2026-06-20 23:50:56,189	INFO scripts.py:822 -- ray[35m.[39m[26minit(_node_ip_address[35m=[39m[26m[33m'129.67.150.216'[39m[26m)
+2026-06-20 23:50:56,189	INFO scripts.py:834 -- To submit a Ray job using the Ray Jobs CLI:
+2026-06-20 23:50:56,189	INFO scripts.py:835 -- [1m  RAY_ADDRESS='http://127.0.0.1:8265' ray job submit --working-dir . -- python my_script.py[22m
+2026-06-20 23:50:56,189	INFO scripts.py:844 -- See https://docs.ray.io/en/latest/cluster/running-applications/job-submission/index.html 
+2026-06-20 23:50:56,189	INFO scripts.py:848 -- for more information on submitting Ray jobs to the Ray cluster.
+2026-06-20 23:50:56,189	INFO scripts.py:853 -- To terminate the Ray runtime, run
+2026-06-20 23:50:56,189	INFO scripts.py:854 -- [1m  ray stop[22m
+2026-06-20 23:50:56,189	INFO scripts.py:857 -- To view the status of the cluster, use
+2026-06-20 23:50:56,189	INFO scripts.py:858 --   [1mray status[22m[26m
+2026-06-20 23:50:56,189	INFO scripts.py:862 -- To monitor and debug Ray, view the dashboard at 
+2026-06-20 23:50:56,189	INFO scripts.py:863 --   [1m127.0.0.1:8265[22m[26m
+2026-06-20 23:50:56,190	INFO scripts.py:870 -- [4mIf connection to the dashboard fails, check your firewall settings and network configuration.[24m
++ export NCCL_DEBUG=WARN
++ NCCL_DEBUG=WARN
++ export NCCL_SHM_DISABLE=1
++ NCCL_SHM_DISABLE=1
++ export RAY_BACKEND_LOG_LEVEL=error
++ RAY_BACKEND_LOG_LEVEL=error
++ export RAY_DEDUP_LOGS=1
++ RAY_DEDUP_LOGS=1
++ export PROJECT_NAME=verl_train
++ PROJECT_NAME=verl_train
++ export WANDB_API_KEY=ae5357c956169358a187cc70668d0b78265e6412
++ WANDB_API_KEY=ae5357c956169358a187cc70668d0b78265e6412
++ export WANDB_OFFICIAL=1
++ WANDB_OFFICIAL=1
++ export HDFS_DATA_PATH=/scratch-ssd/ms25sstj
++ HDFS_DATA_PATH=/scratch-ssd/ms25sstj
++ export HDFS_MODEL_PATH=Qwen
++ HDFS_MODEL_PATH=Qwen
++ export HDFS_CHECKPOINT_PATH=/scratch-ssd/ms25sstj/checkpoints
++ HDFS_CHECKPOINT_PATH=/scratch-ssd/ms25sstj/checkpoints
++ export HDFS_LOG_PATH=/scratch-ssd/ms25sstj/logs
++ HDFS_LOG_PATH=/scratch-ssd/ms25sstj/logs
++ export RUN_NAME=verl-grpo
++ RUN_NAME=verl-grpo
++ export ARNOLD_WORKER_NUM=1
++ ARNOLD_WORKER_NUM=1
++ TRAIN_BATCH_SIZE=256
++ VAL_BATCH_SIZE=256
++ MAX_PROMPT_LENGTH=1024
++ MAX_RESPONSE_LENGTH=3072
++ LEARNING_RATE=5e-7
++ PPO_MINI_BATCH_SIZE=256
++ PPO_MICRO_BATCH_SIZE=2
++ CLIP_RATIO=0.2
++ KL_LOSS_COEF=0.001
++ ENTROPY_COEFFIENT=0.001
++ KL_LOSS_TYPE=low_var_kl
++ TEMPERATURE=1.0
++ LOG_PROB_MICRO_BATCH_SIZE=160
++ ROLLOUT_N=8
++ KL_COEF=0.001
++ TOTAL_EPOCHS=20
++ DATASET_NAME=simplelr_math_35
++ ROLLOUT_GPU_MEMORY_UTIL=0.6
++ MODEL_NAME=Qwen2.5-Math-7B
++ SAVE_FREQ=20
++ TEST_FREQ=5
++ REMOVE_CLIP=False
++ ROLLOUT_TENSOR_MODEL_PARALLEL_SIZE=1
++ MICRO_ROLLOUT_BATCH_SIZE=256
++ REMOVE_PREVIOUS_CKPT=False
++ echo 'Arguments received: --model_name' Qwen2.5-0.5B --dataset_name simplelr_qwen_level1to4 --max_response_length 4096 --train_batch_size 1024 --rollout_n 8 --kl_loss_coef 0.0001 --entropy_coeffient 0.001 --rollout_gpu_memory_util 0.6 --rollout_tp 2 --save_freq 5 --micro_rollout_batch_size 64
+Arguments received: --model_name Qwen2.5-0.5B --dataset_name simplelr_qwen_level1to4 --max_response_length 4096 --train_batch_size 1024 --rollout_n 8 --kl_loss_coef 0.0001 --entropy_coeffient 0.001 --rollout_gpu_memory_util 0.6 --rollout_tp 2 --save_freq 5 --micro_rollout_batch_size 64
+++ generate_suffix --model_name Qwen2.5-0.5B --dataset_name simplelr_qwen_level1to4 --max_response_length 4096 --train_batch_size 1024 --rollout_n 8 --kl_loss_coef 0.0001 --entropy_coeffient 0.001 --rollout_gpu_memory_util 0.6 --rollout_tp 2 --save_freq 5 --micro_rollout_batch_size 64
+++ local suffix=
+++ local dataset_provided=false
+++ local model_provided=false
+++ local suffix_provided=false
+++ [[ 22 -gt 0 ]]
+++ case $1 in
+++ suffix+=_Qwen2.5-0.5B
+++ model_provided=true
+++ shift 2
+++ [[ 20 -gt 0 ]]
+++ case $1 in
+++ suffix+=_simplelr_qwen_level1to4
+++ dataset_provided=true
+++ shift 2
+++ [[ 18 -gt 0 ]]
+++ case $1 in
+++ suffix+=_max_response4096
+++ shift 2
+++ [[ 16 -gt 0 ]]
+++ case $1 in
+++ suffix+=_batch1024
+++ shift 2
+++ [[ 14 -gt 0 ]]
+++ case $1 in
+++ suffix+=_rollout8
+++ shift 2
+++ [[ 12 -gt 0 ]]
+++ case $1 in
+++ suffix+=_klcoef0.0001
+++ shift 2
+++ [[ 10 -gt 0 ]]
+++ case $1 in
+++ suffix+=_entcoef0.001
+++ shift 2
+++ [[ 8 -gt 0 ]]
+++ case $1 in
+++ shift 2
+++ [[ 6 -gt 0 ]]
+++ case $1 in
+++ shift
+++ [[ 5 -gt 0 ]]
+++ case $1 in
+++ shift
+++ [[ 4 -gt 0 ]]
+++ case $1 in
+++ shift
+++ [[ 3 -gt 0 ]]
+++ case $1 in
+++ shift
+++ [[ 2 -gt 0 ]]
+++ case $1 in
+++ shift
+++ [[ 1 -gt 0 ]]
+++ case $1 in
+++ shift
+++ [[ 0 -gt 0 ]]
+++ '[' true = false ']'
+++ '[' true = false ']'
+++ '[' false = true ']'
+++ echo _Qwen2.5-0.5B_simplelr_qwen_level1to4_max_response4096_batch1024_rollout8_klcoef0.0001_entcoef0.001
++ SUFFIX=_Qwen2.5-0.5B_simplelr_qwen_level1to4_max_response4096_batch1024_rollout8_klcoef0.0001_entcoef0.001
++ RUN_NAME=verl-grpo_Qwen2.5-0.5B_simplelr_qwen_level1to4_max_response4096_batch1024_rollout8_klcoef0.0001_entcoef0.001
++ LOG_FILE_PATH=/scratch-ssd/ms25sstj/logs/verl-grpo_Qwen2.5-0.5B_simplelr_qwen_level1to4_max_response4096_batch1024_rollout8_klcoef0.0001_entcoef0.001.log
++ [[ 22 -gt 0 ]]
++ echo 'Processing: --model_name'
+Processing: --model_name
++ case "$1" in
++ MODEL_NAME=Qwen2.5-0.5B
++ shift 2
++ [[ 20 -gt 0 ]]
++ echo 'Processing: --dataset_name'
+Processing: --dataset_name
++ case "$1" in
++ DATASET_NAME=simplelr_qwen_level1to4
++ shift 2
++ [[ 18 -gt 0 ]]
++ echo 'Processing: --max_response_length'
+Processing: --max_response_length
++ case "$1" in
++ MAX_RESPONSE_LENGTH=4096
++ shift 2
++ [[ 16 -gt 0 ]]
++ echo 'Processing: --train_batch_size'
+Processing: --train_batch_size
++ case "$1" in
++ TRAIN_BATCH_SIZE=1024
++ shift 2
++ [[ 14 -gt 0 ]]
++ echo 'Processing: --rollout_n'
+Processing: --rollout_n
++ case "$1" in
++ ROLLOUT_N=8
++ shift 2
++ [[ 12 -gt 0 ]]
++ echo 'Processing: --kl_loss_coef'
+Processing: --kl_loss_coef
++ case "$1" in
++ KL_LOSS_COEF=0.0001
++ shift 2
++ [[ 10 -gt 0 ]]
++ echo 'Processing: --entropy_coeffient'
+Processing: --entropy_coeffient
++ case "$1" in
++ ENTROPY_COEFFIENT=0.001
++ shift 2
++ [[ 8 -gt 0 ]]
++ echo 'Processing: --rollout_gpu_memory_util'
+Processing: --rollout_gpu_memory_util
++ case "$1" in
++ ROLLOUT_GPU_MEMORY_UTIL=0.6
++ shift 2
++ [[ 6 -gt 0 ]]
++ echo 'Processing: --rollout_tp'
+Processing: --rollout_tp
++ case "$1" in
++ ROLLOUT_TENSOR_MODEL_PARALLEL_SIZE=2
++ shift 2
++ [[ 4 -gt 0 ]]
++ echo 'Processing: --save_freq'
+Processing: --save_freq
++ case "$1" in
++ SAVE_FREQ=5
++ shift 2
++ [[ 2 -gt 0 ]]
++ echo 'Processing: --micro_rollout_batch_size'
+Processing: --micro_rollout_batch_size
++ case "$1" in
++ MICRO_ROLLOUT_BATCH_SIZE=64
++ shift 2
++ [[ 0 -gt 0 ]]
++ echo 'Training with the following parameters:'
+Training with the following parameters:
++ echo 'Train Batch Size: 1024'
+Train Batch Size: 1024
++ echo 'Val Batch Size: 256'
+Val Batch Size: 256
++ echo 'Max Prompt Length: 1024'
+Max Prompt Length: 1024
++ echo 'Max Response Length: 4096'
+Max Response Length: 4096
++ echo 'Learning Rate: 5e-7'
+Learning Rate: 5e-7
++ echo 'PPO Mini Batch Size: 256'
+PPO Mini Batch Size: 256
++ echo 'PPO Micro Batch Size: 2'
+PPO Micro Batch Size: 2
++ echo 'Micro Rollout Batch Size: 64'
+Micro Rollout Batch Size: 64
++ echo 'KL Loss Coefficient: 0.0001'
+KL Loss Coefficient: 0.0001
++ echo 'KL Loss Type: low_var_kl'
+KL Loss Type: low_var_kl
++ echo 'Temperature: 1.0'
+Temperature: 1.0
++ echo 'Rollout N: 8'
+Rollout N: 8
++ echo 'KL Coefficient: 0.001'
+KL Coefficient: 0.001
++ echo 'Total Epochs: 20'
+Total Epochs: 20
++ echo 'Dataset Name: simplelr_qwen_level1to4'
+Dataset Name: simplelr_qwen_level1to4
++ echo 'Model Name: Qwen2.5-0.5B'
+Model Name: Qwen2.5-0.5B
++ echo 'Remove Clip: False'
+Remove Clip: False
++ echo 'Remove Previous Ckpt: False'
+Remove Previous Ckpt: False
++ echo 'LOG FILE PATH: /scratch-ssd/ms25sstj/logs/verl-grpo_Qwen2.5-0.5B_simplelr_qwen_level1to4_max_response4096_batch1024_rollout8_klcoef0.0001_entcoef0.001.log'
+LOG FILE PATH: /scratch-ssd/ms25sstj/logs/verl-grpo_Qwen2.5-0.5B_simplelr_qwen_level1to4_max_response4096_batch1024_rollout8_klcoef0.0001_entcoef0.001.log
+++ expr 1024 + 4096 + 1000
++ max_num_batched_tokens=6120
++ echo -e 'Training with the following parameters:\nTrain Batch Size: 1024\nVal Batch Size: 256\nMax Prompt Length: 1024\nMax Response Length: 4096\nLearning Rate: 5e-7\nPPO Mini Batch Size: 256\nPPO Micro Batch Size: 2\nKL Loss Coefficient: 0.0001\nKL Loss Type: low_var_kl\nTemperature: 1.0\nRollout N: 8\nKL Coefficient: 0.001\nTotal Epochs: 20\nDataset Name: simplelr_qwen_level1to4\nModel Name: Qwen2.5-0.5B'
+Training with the following parameters:
+Train Batch Size: 1024
+Val Batch Size: 256
+Max Prompt Length: 1024
+Max Response Length: 4096
+Learning Rate: 5e-7
+PPO Mini Batch Size: 256
+PPO Micro Batch Size: 2
+KL Loss Coefficient: 0.0001
+KL Loss Type: low_var_kl
+Temperature: 1.0
+Rollout N: 8
+KL Coefficient: 0.001
+Total Epochs: 20
+Dataset Name: simplelr_qwen_level1to4
+Model Name: Qwen2.5-0.5B
++ tee -a /scratch-ssd/ms25sstj/logs/verl-grpo_Qwen2.5-0.5B_simplelr_qwen_level1to4_max_response4096_batch1024_rollout8_klcoef0.0001_entcoef0.001.log
++ ray job submit --address=127.0.0.1:6379 --entrypoint-num-cpus=1 '--runtime-env-json={
+        "working_dir": "",
+        "excludes": [".git", "slurm-*.out", "*.out", "data/**/*.jsonl"], 
+        "env_vars": {
+          "http_proxy": "",
+          "https_proxy": "",
+          "NCCL_P2P_DISABLE": "1",
+          "MASTER_ADDR": "127.0.0.1"
+        }
+    }' -- python -m verl.trainer.main_ppo algorithm.adv_estimator=grpo data.train_files=/scratch-ssd/ms25sstj/simplelr_qwen_level1to4/train.parquet data.val_files=/scratch-ssd/ms25sstj/simplelr_qwen_level1to4/test.parquet data.train_batch_size=1024 data.val_batch_size=256 data.max_prompt_length=1024 data.max_response_length=4096 actor_rollout_ref.model.path=Qwen/Qwen2.5-0.5B actor_rollout_ref.actor.optim.lr=5e-7 actor_rollout_ref.model.use_remove_padding=True actor_rollout_ref.actor.ppo_mini_batch_size=256 actor_rollout_ref.actor.ppo_micro_batch_size_per_gpu=2 actor_rollout_ref.actor.use_kl_loss=True actor_rollout_ref.actor.kl_loss_coef=0.0001 actor_rollout_ref.actor.entropy_coeff=0.001 actor_rollout_ref.actor.clip_ratio=0.2 actor_rollout_ref.actor.kl_loss_type=low_var_kl actor_rollout_ref.model.enable_gradient_checkpointing=True actor_rollout_ref.actor.fsdp_config.param_offload=False actor_rollout_ref.actor.fsdp_config.grad_offload=False actor_rollout_ref.actor.fsdp_config.optimizer_offload=False actor_rollout_ref.rollout.temperature=1.0 actor_rollout_ref.rollout.log_prob_micro_batch_size=160 actor_rollout_ref.rollout.tensor_model_parallel_size=2 actor_rollout_ref.rollout.name=vllm actor_rollout_ref.rollout.gpu_memory_utilization=0.6 actor_rollout_ref.rollout.n=8 actor_rollout_ref.rollout.enable_chunked_prefill=False +actor_rollout_ref.rollout.disable_custom_all_reduce=True actor_rollout_ref.rollout.free_cache_engine=False actor_rollout_ref.rollout.max_num_batched_tokens=6120 actor_rollout_ref.rollout.micro_rollout_batch_size=64 actor_rollout_ref.ref.log_prob_micro_batch_size=160 actor_rollout_ref.ref.fsdp_config.param_offload=False algorithm.kl_ctrl.kl_coef=0.001 critic.ppo_micro_batch_size_per_gpu=4 trainer.critic_warmup=0 'trainer.logger=[console,wandb]' trainer.project_name=verl_train trainer.remove_previous_ckpt=False trainer.experiment_name=verl-grpo_Qwen2.5-0.5B_simplelr_qwen_level1to4_max_response4096_batch1024_rollout8_klcoef0.0001_entcoef0.001 trainer.n_gpus_per_node=4 trainer.nnodes=1 trainer.remove_clip=False trainer.save_freq=5 trainer.test_freq=5 trainer.default_local_dir=/scratch-ssd/ms25sstj/checkpoints/verl-grpo_Qwen2.5-0.5B_simplelr_qwen_level1to4_max_response4096_batch1024_rollout8_klcoef0.0001_entcoef0.001 trainer.total_epochs=20
+2026-06-20 23:51:00,242	INFO dashboard_sdk.py:338 -- Uploading package gcs://_ray_pkg_694b39a0720eb90a.zip.
+2026-06-20 23:51:00,243	INFO packaging.py:530 -- Creating a file package for local directory ''.
+2026-06-20 23:51:00,511	WARNING packaging.py:405 -- File /auto/users/ms25sstj/projects/simpleRL-reason/examples/simplelr_math_eval/data/tabmwp/test.jsonl is very large (17.38MiB). Consider adding this file to the 'excludes' list to skip uploading it: `ray.init(..., runtime_env={'excludes': ['/auto/users/ms25sstj/projects/simpleRL-reason/examples/simplelr_math_eval/data/tabmwp/test.jsonl']})`
+2026-06-20 23:50:58,177	INFO cli.py:36 -- [37mJob submission server address[39m: [1mhttp://127.0.0.1:8265[22m
+2026-06-20 23:51:15,701	SUCC cli.py:60 -- [32m-------------------------------------------------------[39m
+2026-06-20 23:51:15,701	SUCC cli.py:61 -- [32mJob 'raysubmit_gGbAKiaa4xgkzq82' submitted successfully[39m
+2026-06-20 23:51:15,701	SUCC cli.py:62 -- [32m-------------------------------------------------------[39m
+2026-06-20 23:51:15,701	INFO cli.py:285 -- [36mNext steps[39m
+2026-06-20 23:51:15,702	INFO cli.py:286 -- Query the logs of the job:
+2026-06-20 23:51:15,702	INFO cli.py:288 -- [1mray job logs raysubmit_gGbAKiaa4xgkzq82[22m
+2026-06-20 23:51:15,702	INFO cli.py:290 -- Query the status of the job:
+2026-06-20 23:51:15,702	INFO cli.py:292 -- [1mray job status raysubmit_gGbAKiaa4xgkzq82[22m
+2026-06-20 23:51:15,702	INFO cli.py:294 -- Request the job to be stopped:
+2026-06-20 23:51:15,702	INFO cli.py:296 -- [1mray job stop raysubmit_gGbAKiaa4xgkzq82[22m
+2026-06-20 23:51:15,705	INFO cli.py:303 -- Tailing logs until the job exits (disable with --no-wait):
+WARNING:2026-06-20 23:51:27,431:Initialized ProcessPoolExecutor with 16 workers
+Reward function type: mix
+Format penalty value: -1.0
+2026-06-20 23:51:27,803	INFO worker.py:1432 -- Using address 129.67.150.216:6379 set in the environment variable RAY_ADDRESS
+2026-06-20 23:51:27,803	INFO worker.py:1567 -- Connecting to existing Ray cluster at address: 129.67.150.216:6379...
+2026-06-20 23:51:27,814	INFO worker.py:1743 -- Connected to Ray cluster. View the dashboard at [1m[32m127.0.0.1:8265 [39m[22m
+[36m(pid=640528)[0m WARNING:2026-06-20 23:51:32,198:Initialized ProcessPoolExecutor with 16 workers
+[36m(pid=640528)[0m Reward function type: mix
+[36m(pid=640528)[0m Format penalty value: -1.0
+[36m(main_task pid=640528)[0m {'actor_rollout_ref': {'actor': {'clip_ratio': 0.2,
+[36m(main_task pid=640528)[0m                                  'entropy_coeff': 0.001,
+[36m(main_task pid=640528)[0m                                  'fsdp_config': {'fsdp_size': -1,
+[36m(main_task pid=640528)[0m                                                  'grad_offload': False,
+[36m(main_task pid=640528)[0m                                                  'optimizer_offload': False,
+[36m(main_task pid=640528)[0m                                                  'param_offload': False,
+[36m(main_task pid=640528)[0m                                                  'wrap_policy': {'min_num_params': 0}},
+[36m(main_task pid=640528)[0m                                  'grad_clip': 1.0,
+[36m(main_task pid=640528)[0m                                  'kl_loss_coef': 0.0001,
+[36m(main_task pid=640528)[0m                                  'kl_loss_type': 'low_var_kl',
+[36m(main_task pid=640528)[0m                                  'optim': {'lr': 5e-07,
+[36m(main_task pid=640528)[0m                                            'lr_warmup_steps_ratio': 0.0,
+[36m(main_task pid=640528)[0m                                            'min_lr_ratio': None,
+[36m(main_task pid=640528)[0m                                            'total_training_steps': -1,
+[36m(main_task pid=640528)[0m                                            'warmup_style': 'constant'},
+[36m(main_task pid=640528)[0m                                  'ppo_epochs': 1,
+[36m(main_task pid=640528)[0m                                  'ppo_max_token_len_per_gpu': 16384,
+[36m(main_task pid=640528)[0m                                  'ppo_micro_batch_size': None,
+[36m(main_task pid=640528)[0m                                  'ppo_micro_batch_size_per_gpu': 2,
+[36m(main_task pid=640528)[0m                                  'ppo_mini_batch_size': 256,
+[36m(main_task pid=640528)[0m                                  'shuffle': False,
+[36m(main_task pid=640528)[0m                                  'strategy': 'fsdp',
+[36m(main_task pid=640528)[0m                                  'ulysses_sequence_parallel_size': 1,
+[36m(main_task pid=640528)[0m                                  'use_dynamic_bsz': False,
+[36m(main_task pid=640528)[0m                                  'use_kl_loss': True},
+[36m(main_task pid=640528)[0m                        'hybrid_engine': True,
+[36m(main_task pid=640528)[0m                        'model': {'enable_gradient_checkpointing': True,
+[36m(main_task pid=640528)[0m                                  'external_lib': None,
+[36m(main_task pid=640528)[0m                                  'override_config': {},
+[36m(main_task pid=640528)[0m                                  'path': 'Qwen/Qwen2.5-0.5B',
+[36m(main_task pid=640528)[0m                                  'use_remove_padding': True},
+[36m(main_task pid=640528)[0m                        'ref': {'fsdp_config': {'param_offload': False,
+[36m(main_task pid=640528)[0m                                                'wrap_policy': {'min_num_params': 0}},
+[36m(main_task pid=640528)[0m                                'log_prob_max_token_len_per_gpu': 16384,
+[36m(main_task pid=640528)[0m                                'log_prob_micro_batch_size': 160,
+[36m(main_task pid=640528)[0m                                'log_prob_micro_batch_size_per_gpu': None,
+[36m(main_task pid=640528)[0m                                'log_prob_use_dynamic_bsz': False,
+[36m(main_task pid=640528)[0m                                'ulysses_sequence_parallel_size': 1},
+[36m(main_task pid=640528)[0m                        'rollout': {'disable_custom_all_reduce': True,
+[36m(main_task pid=640528)[0m                                    'disable_log_stats': True,
+[36m(main_task pid=640528)[0m                                    'do_sample': True,
+[36m(main_task pid=640528)[0m                                    'dtype': 'bfloat16',
+[36m(main_task pid=640528)[0m                                    'enable_chunked_prefill': False,
+[36m(main_task pid=640528)[0m                                    'enforce_eager': True,
+[36m(main_task pid=640528)[0m                                    'free_cache_engine': False,
+[36m(main_task pid=640528)[0m                                    'gpu_memory_utilization': 0.6,
+[36m(main_task pid=640528)[0m                                    'ignore_eos': False,
+[36m(main_task pid=640528)[0m                                    'load_format': 'dummy_dtensor',
+[36m(main_task pid=640528)[0m                                    'log_prob_max_token_len_per_gpu': 16384,
+[36m(main_task pid=640528)[0m                                    'log_prob_micro_batch_size': 160,
+[36m(main_task pid=640528)[0m                                    'log_prob_micro_batch_size_per_gpu': None,
+[36m(main_task pid=640528)[0m                                    'log_prob_use_dynamic_bsz': False,
+[36m(main_task pid=640528)[0m                                    'max_num_batched_tokens': 6120,
+[36m(main_task pid=640528)[0m                                    'max_num_seqs': 1024,
+[36m(main_task pid=640528)[0m                                    'micro_rollout_batch_size': 64,
+[36m(main_task pid=640528)[0m                                    'model_path': 'Qwen/Qwen2.5-0.5B',
+[36m(main_task pid=640528)[0m                                    'n': 8,
+[36m(main_task pid=640528)[0m                                    'name': 'vllm',
+[36m(main_task pid=640528)[0m                                    'prompt_length': 1024,
+[36m(main_task pid=640528)[0m                                    'response_length': 4096,
+[36m(main_task pid=640528)[0m                                    'swap_space': 40,
+[36m(main_task pid=640528)[0m                                    'temperature': 1.0,
+[36m(main_task pid=640528)[0m                                    'tensor_model_parallel_size': 2,
+[36m(main_task pid=640528)[0m                                    'top_k': -1,
+[36m(main_task pid=640528)[0m                                    'top_p': 1}},
+[36m(main_task pid=640528)[0m  'algorithm': {'adv_estimator': 'grpo',
+[36m(main_task pid=640528)[0m                'gamma': 1.0,
+[36m(main_task pid=640528)[0m                'kl_ctrl': {'kl_coef': 0.001, 'type': 'fixed'},
+[36m(main_task pid=640528)[0m                'kl_penalty': 'kl',
+[36m(main_task pid=640528)[0m                'lam': 1.0},
+[36m(main_task pid=640528)[0m  'critic': {'cliprange_value': 0.5,
+[36m(main_task pid=640528)[0m             'forward_max_token_len_per_gpu': 32768,
+[36m(main_task pid=640528)[0m             'forward_micro_batch_size': None,
+[36m(main_task pid=640528)[0m             'forward_micro_batch_size_per_gpu': 4,
+[36m(main_task pid=640528)[0m             'grad_clip': 1.0,
+[36m(main_task pid=640528)[0m             'model': {'enable_gradient_checkpointing': True,
+[36m(main_task pid=640528)[0m                       'external_lib': None,
+[36m(main_task pid=640528)[0m                       'fsdp_config': {'fsdp_size': -1,
+[36m(main_task pid=640528)[0m                                       'grad_offload': False,
+[36m(main_task pid=640528)[0m                                       'optimizer_offload': False,
+[36m(main_task pid=640528)[0m                                       'param_offload': False,
+[36m(main_task pid=640528)[0m                                       'wrap_policy': {'min_num_params': 0}},
+[36m(main_task pid=640528)[0m                       'override_config': {},
+[36m(main_task pid=640528)[0m                       'path': '~/models/deepseek-llm-7b-chat',
+[36m(main_task pid=640528)[0m                       'tokenizer_path': 'Qwen/Qwen2.5-0.5B',
+[36m(main_task pid=640528)[0m                       'use_remove_padding': False},
+[36m(main_task pid=640528)[0m             'optim': {'lr': 1e-05,
+[36m(main_task pid=640528)[0m                       'lr_warmup_steps_ratio': 0.0,
+[36m(main_task pid=640528)[0m                       'min_lr_ratio': None,
+[36m(main_task pid=640528)[0m                       'total_training_steps': -1,
+[36m(main_task pid=640528)[0m                       'warmup_style': 'constant'},
+[36m(main_task pid=640528)[0m             'ppo_epochs': 1,
+[36m(main_task pid=640528)[0m             'ppo_max_token_len_per_gpu': 32768,
+[36m(main_task pid=640528)[0m             'ppo_micro_batch_size': None,
+[36m(main_task pid=640528)[0m             'ppo_micro_batch_size_per_gpu': 4,
+[36m(main_task pid=640528)[0m             'ppo_mini_batch_size': 256,
+[36m(main_task pid=640528)[0m             'shuffle': False,
+[36m(main_task pid=640528)[0m             'strategy': 'fsdp',
+[36m(main_task pid=640528)[0m             'ulysses_sequence_parallel_size': 1,
+[36m(main_task pid=640528)[0m             'use_dynamic_bsz': False},
+[36m(main_task pid=640528)[0m  'data': {'max_prompt_length': 1024,
+[36m(main_task pid=640528)[0m           'max_response_length': 4096,
+[36m(main_task pid=640528)[0m           'prompt_key': 'prompt',
+[36m(main_task pid=640528)[0m           'return_raw_chat': False,
+[36m(main_task pid=640528)[0m           'return_raw_input_ids': False,
+[36m(main_task pid=640528)[0m           'shuffle': True,
+[36m(main_task pid=640528)[0m           'tokenizer': None,
+[36m(main_task pid=640528)[0m           'train_batch_size': 1024,
+[36m(main_task pid=640528)[0m           'train_files': '/scratch-ssd/ms25sstj/simplelr_qwen_level1to4/train.parquet',
+[36m(main_task pid=640528)[0m           'val_batch_size': 256,
+[36m(main_task pid=640528)[0m           'val_files': '/scratch-ssd/ms25sstj/simplelr_qwen_level1to4/test.parquet'},
+[36m(main_task pid=640528)[0m  'reward_model': {'enable': False,
+[36m(main_task pid=640528)[0m                   'forward_max_token_len_per_gpu': 32768,
+[36m(main_task pid=640528)[0m                   'max_length': None,
+[36m(main_task pid=640528)[0m                   'micro_batch_size': None,
+[36m(main_task pid=640528)[0m                   'micro_batch_size_per_gpu': None,
+[36m(main_task pid=640528)[0m                   'model': {'external_lib': None,
+[36m(main_task pid=640528)[0m                             'fsdp_config': {'fsdp_size': -1,
+[36m(main_task pid=640528)[0m                                             'min_num_params': 0,
+[36m(main_task pid=640528)[0m                                             'param_offload': False},
+[36m(main_task pid=640528)[0m                             'input_tokenizer': 'Qwen/Qwen2.5-0.5B',
+[36m(main_task pid=640528)[0m                             'path': '~/models/FsfairX-LLaMA3-RM-v0.1',
+[36m(main_task pid=640528)[0m                             'use_remove_padding': False},
+[36m(main_task pid=640528)[0m                   'strategy': 'fsdp',
+[36m(main_task pid=640528)[0m                   'ulysses_sequence_parallel_size': 1,
+[36m(main_task pid=640528)[0m                   'use_dynamic_bsz': False},
+[36m(main_task pid=640528)[0m  'trainer': {'critic_warmup': 0,
+[36m(main_task pid=640528)[0m              'default_hdfs_dir': None,
+[36m(main_task pid=640528)[0m              'default_local_dir': '/scratch-ssd/ms25sstj/checkpoints/verl-grpo_Qwen2.5-0.5B_simplelr_qwen_level1to4_max_response4096_batch1024_rollout8_klcoef0.0001_entcoef0.001',
+[36m(main_task pid=640528)[0m              'experiment_name': 'verl-grpo_Qwen2.5-0.5B_simplelr_qwen_level1to4_max_response4096_batch1024_rollout8_klcoef0.0001_entcoef0.001',
+[36m(main_task pid=640528)[0m              'logger': ['console', 'wandb'],
+[36m(main_task pid=640528)[0m              'n_gpus_per_node': 4,
+[36m(main_task pid=640528)[0m              'nnodes': 1,
+[36m(main_task pid=640528)[0m              'project_name': 'verl_train',
+[36m(main_task pid=640528)[0m              'remove_clip': False,
+[36m(main_task pid=640528)[0m              'remove_previous_ckpt': False,
+[36m(main_task pid=640528)[0m              'resume_from_path': False,
+[36m(main_task pid=640528)[0m              'resume_mode': 'auto',
+[36m(main_task pid=640528)[0m              'save_freq': 5,
+[36m(main_task pid=640528)[0m              'test_freq': 5,
+[36m(main_task pid=640528)[0m              'total_epochs': 20,
+[36m(main_task pid=640528)[0m              'total_training_steps': None}}
+[36m(main_task pid=640528)[0m [validate_config] All configuration checks passed successfully!
+[36m(main_task pid=640528)[0m original dataset len: 8139
+[36m(main_task pid=640528)[0m filter dataset len: 8058
+[36m(main_task pid=640528)[0m original dataset len: 500
+[36m(main_task pid=640528)[0m filter dataset len: 496
+[36m(main_task pid=640528)[0m Size of train dataloader: 7
+[36m(main_task pid=640528)[0m Size of val dataloader: 1
+[36m(main_task pid=640528)[0m Total training steps: 140
+[36m(WorkerDict pid=640897)[0m [W620 23:51:44.732272938 socket.cpp:697] [c10d] The client socket cannot be initialized to connect to [localhost]:58055 (errno: 97 - Address family not supported by protocol).
+[36m(WorkerDict pid=641468)[0m [W620 23:51:53.602450040 socket.cpp:697] [c10d] The client socket cannot be initialized to connect to [localhost]:58055 (errno: 97 - Address family not supported by protocol).
+[36m(WorkerDict pid=641466)[0m [W620 23:51:53.692230001 socket.cpp:697] [c10d] The client socket cannot be initialized to connect to [localhost]:58055 (errno: 97 - Address family not supported by protocol).
+[36m(WorkerDict pid=640897)[0m Model config after override: Qwen2Config {
+[36m(WorkerDict pid=640897)[0m   "_name_or_path": "Qwen/Qwen2.5-0.5B",
+[36m(WorkerDict pid=640897)[0m   "architectures": [
+[36m(WorkerDict pid=640897)[0m     "Qwen2ForCausalLM"
+[36m(WorkerDict pid=640897)[0m   ],
+[36m(WorkerDict pid=640897)[0m   "attention_dropout": 0.0,
+[36m(WorkerDict pid=640897)[0m   "eos_token_id": 151643,
+[36m(WorkerDict pid=640897)[0m   "hidden_act": "silu",
+[36m(WorkerDict pid=640897)[0m   "hidden_size": 896,
+[36m(WorkerDict pid=640897)[0m   "initializer_range": 0.02,
+[36m(WorkerDict pid=640897)[0m   "intermediate_size": 4864,
+[36m(WorkerDict pid=640897)[0m   "max_position_embeddings": 32768,
+[36m(WorkerDict pid=640897)[0m   "max_window_layers": 24,
+[36m(WorkerDict pid=640897)[0m   "model_type": "qwen2",
+[36m(WorkerDict pid=640897)[0m   "num_attention_heads": 14,
+[36m(WorkerDict pid=640897)[0m   "num_hidden_layers": 24,
+[36m(WorkerDict pid=640897)[0m   "num_key_value_heads": 2,
+[36m(WorkerDict pid=640897)[0m   "pad_token_id": 151643,
+[36m(WorkerDict pid=640897)[0m   "rms_norm_eps": 1e-06,
+[36m(WorkerDict pid=640897)[0m   "rope_scaling": null,
+[36m(WorkerDict pid=640897)[0m   "rope_theta": 1000000.0,
+[36m(WorkerDict pid=640897)[0m   "sliding_window": null,
+[36m(WorkerDict pid=640897)[0m   "tie_word_embeddings": true,
+[36m(WorkerDict pid=640897)[0m   "torch_dtype": "bfloat16",
+[36m(WorkerDict pid=640897)[0m   "transformers_version": "4.47.1",
+[36m(WorkerDict pid=640897)[0m   "use_cache": true,
+[36m(WorkerDict pid=640897)[0m   "use_mrope": false,
+[36m(WorkerDict pid=640897)[0m   "use_sliding_window": false,
+[36m(WorkerDict pid=640897)[0m   "vocab_size": 151936
+[36m(WorkerDict pid=640897)[0m }
+[36m(WorkerDict pid=640897)[0m 
+[36m(WorkerDict pid=640897)[0m NCCL version 2.20.5+cuda12.4
+[36m(WorkerDict pid=640897)[0m Qwen2ForCausalLM contains 494.03M parameters
+[36m(WorkerDict pid=640897)[0m wrap_policy: functools.partial(<function _or_policy at 0x70b5ed8881f0>, policies=[functools.partial(<function transformer_auto_wrap_policy at 0x70b5ed8880d0>, transformer_layer_cls={<class 'transformers.models.qwen2.modeling_qwen2.Qwen2DecoderLayer'>})])
+[36m(WorkerDict pid=640897)[0m Actor use_remove_padding=True
+[36m(WorkerDict pid=640897)[0m Model config after override: Qwen2Config {
+[36m(WorkerDict pid=640897)[0m   "_name_or_path": "Qwen/Qwen2.5-0.5B",
+[36m(WorkerDict pid=640897)[0m   "architectures": [
+[36m(WorkerDict pid=640897)[0m     "Qwen2ForCausalLM"
+[36m(WorkerDict pid=640897)[0m   ],
+[36m(WorkerDict pid=640897)[0m   "attention_dropout": 0.0,
+[36m(WorkerDict pid=640897)[0m   "eos_token_id": 151643,
+[36m(WorkerDict pid=640897)[0m   "hidden_act": "silu",
+[36m(WorkerDict pid=640897)[0m   "hidden_size": 896,
+[36m(WorkerDict pid=640897)[0m   "initializer_range": 0.02,
+[36m(WorkerDict pid=640897)[0m   "intermediate_size": 4864,
+[36m(WorkerDict pid=640897)[0m   "max_position_embeddings": 32768,
+[36m(WorkerDict pid=640897)[0m   "max_window_layers": 24,
+[36m(WorkerDict pid=640897)[0m   "model_type": "qwen2",
+[36m(WorkerDict pid=640897)[0m   "num_attention_heads": 14,
+[36m(WorkerDict pid=640897)[0m   "num_hidden_layers": 24,
+[36m(WorkerDict pid=640897)[0m   "num_key_value_heads": 2,
+[36m(WorkerDict pid=640897)[0m   "pad_token_id": 151643,
+[36m(WorkerDict pid=640897)[0m   "rms_norm_eps": 1e-06,
+[36m(WorkerDict pid=640897)[0m   "rope_scaling": null,
+[36m(WorkerDict pid=640897)[0m   "rope_theta": 1000000.0,
+[36m(WorkerDict pid=640897)[0m   "sliding_window": null,
+[36m(WorkerDict pid=640897)[0m   "tie_word_embeddings": true,
+[36m(WorkerDict pid=640897)[0m   "torch_dtype": "bfloat16",
+[36m(WorkerDict pid=640897)[0m   "transformers_version": "4.47.1",
+[36m(WorkerDict pid=640897)[0m   "use_cache": true,
+[36m(WorkerDict pid=640897)[0m   "use_mrope": false,
+[36m(WorkerDict pid=640897)[0m   "use_sliding_window": false,
+[36m(WorkerDict pid=640897)[0m   "vocab_size": 151936
+[36m(WorkerDict pid=640897)[0m }
+[36m(WorkerDict pid=640897)[0m 
+[36m(WorkerDict pid=640897)[0m Qwen2ForCausalLM contains 494.03M parameters
+[36m(WorkerDict pid=640897)[0m wrap_policy: functools.partial(<function _or_policy at 0x70b5ed8881f0>, policies=[functools.partial(<function transformer_auto_wrap_policy at 0x70b5ed8880d0>, transformer_layer_cls={<class 'transformers.models.qwen2.modeling_qwen2.Qwen2DecoderLayer'>})])[32m [repeated 4x across cluster] (Ray deduplicates logs by default. Set RAY_DEDUP_LOGS=0 to disable log deduplication, or see https://docs.ray.io/en/master/ray-observability/ray-logging.html#log-deduplication for more options.)[0m
+[36m(WorkerDict pid=640897)[0m Total steps: 140, num_warmup_steps: 0
+[36m(WorkerDict pid=640897)[0m Actor use_remove_padding=True[32m [repeated 4x across cluster][0m
+Error executing job with overrides: ['algorithm.adv_estimator=grpo', 'data.train_files=/scratch-ssd/ms25sstj/simplelr_qwen_level1to4/train.parquet', 'data.val_files=/scratch-ssd/ms25sstj/simplelr_qwen_level1to4/test.parquet', 'data.train_batch_size=1024', 'data.val_batch_size=256', 'data.max_prompt_length=1024', 'data.max_response_length=4096', 'actor_rollout_ref.model.path=Qwen/Qwen2.5-0.5B', 'actor_rollout_ref.actor.optim.lr=5e-7', 'actor_rollout_ref.model.use_remove_padding=True', 'actor_rollout_ref.actor.ppo_mini_batch_size=256', 'actor_rollout_ref.actor.ppo_micro_batch_size_per_gpu=2', 'actor_rollout_ref.actor.use_kl_loss=True', 'actor_rollout_ref.actor.kl_loss_coef=0.0001', 'actor_rollout_ref.actor.entropy_coeff=0.001', 'actor_rollout_ref.actor.clip_ratio=0.2', 'actor_rollout_ref.actor.kl_loss_type=low_var_kl', 'actor_rollout_ref.model.enable_gradient_checkpointing=True', 'actor_rollout_ref.actor.fsdp_config.param_offload=False', 'actor_rollout_ref.actor.fsdp_config.grad_offload=False', 'actor_rollout_ref.actor.fsdp_config.optimizer_offload=False', 'actor_rollout_ref.rollout.temperature=1.0', 'actor_rollout_ref.rollout.log_prob_micro_batch_size=160', 'actor_rollout_ref.rollout.tensor_model_parallel_size=2', 'actor_rollout_ref.rollout.name=vllm', 'actor_rollout_ref.rollout.gpu_memory_utilization=0.6', 'actor_rollout_ref.rollout.n=8', 'actor_rollout_ref.rollout.enable_chunked_prefill=False', '+actor_rollout_ref.rollout.disable_custom_all_reduce=True', 'actor_rollout_ref.rollout.free_cache_engine=False', 'actor_rollout_ref.rollout.max_num_batched_tokens=6120', 'actor_rollout_ref.rollout.micro_rollout_batch_size=64', 'actor_rollout_ref.ref.log_prob_micro_batch_size=160', 'actor_rollout_ref.ref.fsdp_config.param_offload=False', 'algorithm.kl_ctrl.kl_coef=0.001', 'critic.ppo_micro_batch_size_per_gpu=4', 'trainer.critic_warmup=0', 'trainer.logger=[console,wandb]', 'trainer.project_name=verl_train', 'trainer.remove_previous_ckpt=False', 'trainer.experiment_name=verl-grpo_Qwen2.5-0.5B_simplelr_qwen_level1to4_max_response4096_batch1024_rollout8_klcoef0.0001_entcoef0.001', 'trainer.n_gpus_per_node=4', 'trainer.nnodes=1', 'trainer.remove_clip=False', 'trainer.save_freq=5', 'trainer.test_freq=5', 'trainer.default_local_dir=/scratch-ssd/ms25sstj/checkpoints/verl-grpo_Qwen2.5-0.5B_simplelr_qwen_level1to4_max_response4096_batch1024_rollout8_klcoef0.0001_entcoef0.001', 'trainer.total_epochs=20']
+Traceback (most recent call last):
+  File "/scratch-ssd/ms25sstj/ray_tmp/session_2026-06-20_23-50-53_262285_632023/runtime_resources/working_dir_files/_ray_pkg_694b39a0720eb90a/verl/trainer/main_ppo.py", line 111, in main
+    run_ppo(config)
+  File "/scratch-ssd/ms25sstj/ray_tmp/session_2026-06-20_23-50-53_262285_632023/runtime_resources/working_dir_files/_ray_pkg_694b39a0720eb90a/verl/trainer/main_ppo.py", line 119, in run_ppo
+    ray.get(main_task.remote(config, compute_score))
+  File "/scratch-ssd/ms25sstj/simpleRL-reason/lib/python3.10/site-packages/ray/_private/auto_init_hook.py", line 21, in auto_init_wrapper
+    return fn(*args, **kwargs)
+  File "/scratch-ssd/ms25sstj/simpleRL-reason/lib/python3.10/site-packages/ray/_private/client_mode_hook.py", line 103, in wrapper
+    return func(*args, **kwargs)
+  File "/scratch-ssd/ms25sstj/simpleRL-reason/lib/python3.10/site-packages/ray/_private/worker.py", line 2667, in get
+    values, debugger_breakpoint = worker.get_objects(object_refs, timeout=timeout)
+  File "/scratch-ssd/ms25sstj/simpleRL-reason/lib/python3.10/site-packages/ray/_private/worker.py", line 864, in get_objects
+    raise value.as_instanceof_cause()
+ray.exceptions.RayTaskError(ModuleNotFoundError): [36mray::main_task()[39m (pid=640528, ip=129.67.150.216)
+  File "/scratch-ssd/ms25sstj/ray_tmp/session_2026-06-20_23-50-53_262285_632023/runtime_resources/working_dir_files/_ray_pkg_694b39a0720eb90a/verl/trainer/main_ppo.py", line 204, in main_task
+    trainer.init_workers()
+  File "/scratch-ssd/ms25sstj/ray_tmp/session_2026-06-20_23-50-53_262285_632023/runtime_resources/working_dir_files/_ray_pkg_694b39a0720eb90a/verl/trainer/ppo/ray_trainer.py", line 637, in init_workers
+    self.actor_rollout_wg.init_model()
+  File "/scratch-ssd/ms25sstj/ray_tmp/session_2026-06-20_23-50-53_262285_632023/runtime_resources/working_dir_files/_ray_pkg_694b39a0720eb90a/verl/single_controller/ray/base.py", line 42, in func
+    output = ray.get(output)
+ray.exceptions.RayTaskError(ModuleNotFoundError): [36mray::WorkerDict.actor_rollout_init_model()[39m (pid=641468, ip=129.67.150.216, actor_id=65f62ad0016ba273deb956e002000000, repr=<verl.single_controller.ray.base.WorkerDict object at 0x7ee7c4cb67a0>)
+  File "/scratch-ssd/ms25sstj/ray_tmp/session_2026-06-20_23-50-53_262285_632023/runtime_resources/working_dir_files/_ray_pkg_694b39a0720eb90a/verl/single_controller/ray/base.py", line 399, in func
+    return getattr(self.worker_dict[key], name)(*args, **kwargs)
+  File "/scratch-ssd/ms25sstj/ray_tmp/session_2026-06-20_23-50-53_262285_632023/runtime_resources/working_dir_files/_ray_pkg_694b39a0720eb90a/verl/single_controller/base/decorator.py", line 404, in inner
+    return func(*args, **kwargs)
+  File "/scratch-ssd/ms25sstj/ray_tmp/session_2026-06-20_23-50-53_262285_632023/runtime_resources/working_dir_files/_ray_pkg_694b39a0720eb90a/verl/workers/fsdp_workers.py", line 373, in init_model
+    self.rollout, self.rollout_sharding_manager = self._build_rollout()
+  File "/scratch-ssd/ms25sstj/ray_tmp/session_2026-06-20_23-50-53_262285_632023/runtime_resources/working_dir_files/_ray_pkg_694b39a0720eb90a/verl/workers/fsdp_workers.py", line 304, in _build_rollout
+    from verl.workers.rollout.vllm_rollout import vLLMRollout
+  File "/scratch-ssd/ms25sstj/ray_tmp/session_2026-06-20_23-50-53_262285_632023/runtime_resources/working_dir_files/_ray_pkg_694b39a0720eb90a/verl/workers/rollout/vllm_rollout/__init__.py", line 15, in <module>
+    from .vllm_rollout import vLLMRollout
+  File "/scratch-ssd/ms25sstj/ray_tmp/session_2026-06-20_23-50-53_262285_632023/runtime_resources/working_dir_files/_ray_pkg_694b39a0720eb90a/verl/workers/rollout/vllm_rollout/vllm_rollout.py", line 38, in <module>
+    from verl.third_party.vllm import LLM, vllm_version
+  File "/scratch-ssd/ms25sstj/ray_tmp/session_2026-06-20_23-50-53_262285_632023/runtime_resources/working_dir_files/_ray_pkg_694b39a0720eb90a/verl/third_party/vllm/__init__.py", line 40, in <module>
+    from .vllm_v_0_5_4.llm import LLM
+  File "/scratch-ssd/ms25sstj/ray_tmp/session_2026-06-20_23-50-53_262285_632023/runtime_resources/working_dir_files/_ray_pkg_694b39a0720eb90a/verl/third_party/vllm/vllm_v_0_5_4/llm.py", line 24, in <module>
+    from .llm_engine_sp import LLMEngine
+  File "/scratch-ssd/ms25sstj/ray_tmp/session_2026-06-20_23-50-53_262285_632023/runtime_resources/working_dir_files/_ray_pkg_694b39a0720eb90a/verl/third_party/vllm/vllm_v_0_5_4/llm_engine_sp.py", line 19, in <module>
+    import vllm.envs as envs
+  File "/scratch-ssd/ms25sstj/simpleRL-reason/lib/python3.10/site-packages/vllm/__init__.py", line 6, in <module>
+    from vllm.entrypoints.llm import LLM
+  File "/scratch-ssd/ms25sstj/simpleRL-reason/lib/python3.10/site-packages/vllm/entrypoints/llm.py", line 13, in <module>
+    from vllm.model_executor.guided_decoding import (
+  File "/scratch-ssd/ms25sstj/simpleRL-reason/lib/python3.10/site-packages/vllm/model_executor/guided_decoding/__init__.py", line 8, in <module>
+    from vllm.model_executor.guided_decoding.outlines_decoding import (
+  File "/scratch-ssd/ms25sstj/simpleRL-reason/lib/python3.10/site-packages/vllm/model_executor/guided_decoding/outlines_decoding.py", line 15, in <module>
+    from vllm.model_executor.guided_decoding.outlines_logits_processors import (
+  File "/scratch-ssd/ms25sstj/simpleRL-reason/lib/python3.10/site-packages/vllm/model_executor/guided_decoding/outlines_logits_processors.py", line 25, in <module>
+    from outlines import grammars
+  File "/scratch-ssd/ms25sstj/simpleRL-reason/lib/python3.10/site-packages/outlines/__init__.py", line 5, in <module>
+    import outlines.types
+  File "/scratch-ssd/ms25sstj/simpleRL-reason/lib/python3.10/site-packages/outlines/types/__init__.py", line 1, in <module>
+    from . import airports, countries
+  File "/scratch-ssd/ms25sstj/simpleRL-reason/lib/python3.10/site-packages/outlines/types/airports.py", line 4, in <module>
+    from pyairports.airports import AIRPORT_LIST
+ModuleNotFoundError: No module named 'pyairports'
+
+Set the environment variable HYDRA_FULL_ERROR=1 for a complete stack trace.
+[36m(WorkerDict pid=641468)[0m wrap_policy: functools.partial(<function _or_policy at 0x7ee8288c81f0>, policies=[functools.partial(<function transformer_auto_wrap_policy at 0x7ee8288c80d0>, transformer_layer_cls={<class 'transformers.models.qwen2.modeling_qwen2.Qwen2DecoderLayer'>})])[32m [repeated 3x across cluster][0m
+[36m(WorkerDict pid=641468)[0m Total steps: 140, num_warmup_steps: 0[32m [repeated 3x across cluster][0m
+[36m(WorkerDict pid=641468)[0m Actor use_remove_padding=True[32m [repeated 3x across cluster][0m
+[36m(WorkerDict pid=641467)[0m [W620 23:51:53.729270275 socket.cpp:697] [c10d] The client socket cannot be initialized to connect to [localhost]:58055 (errno: 97 - Address family not supported by protocol).
+2026-06-20 23:52:04,598	ERR cli.py:68 -- [31m---------------------------------------[39m
+2026-06-20 23:52:04,599	ERR cli.py:69 -- [31mJob 'raysubmit_gGbAKiaa4xgkzq82' failed[39m
+2026-06-20 23:52:04,599	ERR cli.py:70 -- [31m---------------------------------------[39m
+2026-06-20 23:52:04,599	INFO cli.py:83 -- Status message: Job entrypoint command failed with exit code 1, last available logs (truncated to 20,000 chars):
+    from . import airports, countries
+  File "/scratch-ssd/ms25sstj/simpleRL-reason/lib/python3.10/site-packages/outlines/types/airports.py", line 4, in <module>
+    from pyairports.airports import AIRPORT_LIST
+ModuleNotFoundError: No module named 'pyairports'
+
+Set the environment variable HYDRA_FULL_ERROR=1 for a complete stack trace.
+[36m(WorkerDict pid=641468)[0m wrap_policy: functools.partial(<function _or_policy at 0x7ee8288c81f0>, policies=[functools.partial(<function transformer_auto_wrap_policy at 0x7ee8288c80d0>, transformer_layer_cls={<class 'transformers.models.qwen2.modeling_qwen2.Qwen2DecoderLayer'>})])[32m [repeated 3x across cluster][0m
+[36m(WorkerDict pid=641468)[0m Total steps: 140, num_warmup_steps: 0[32m [repeated 3x across cluster][0m
+[36m(WorkerDict pid=641468)[0m Actor use_remove_padding=True[32m [repeated 3x across cluster][0m
+[36m(WorkerDict pid=641467)[0m [W620 23:51:53.729270275 socket.cpp:697] [c10d] The client socket cannot be initialized to connect to [localhost]:58055 (errno: 97 - Address family not supported by protocol).
+

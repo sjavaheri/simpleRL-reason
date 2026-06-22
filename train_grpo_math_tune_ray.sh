@@ -2,26 +2,28 @@
 
 USER_ENV=`whoami`
 set -x
-export NCCL_DEBUG=DEBUG
-export RAY_BACKEND_LOG_LEVEL=debug
+export NCCL_DEBUG=WARN
+export NCCL_SHM_DISABLE=1
+export RAY_BACKEND_LOG_LEVEL=error
 export RAY_DEDUP_LOGS=1
 
-
 export PROJECT_NAME=verl_train
-export WANDB_API_KEY=TO_BE_FILLED
+export WANDB_API_KEY="ae5357c956169358a187cc70668d0b78265e6412"
 export WANDB_OFFICIAL=1
-export VLLM_ATTENTION_BACKEND=XFORMERS
-export HDFS_DATA_PATH=TO_BE_FILLED
-export HDFS_MODEL_PATH=TO_BE_FILLED
-export HDFS_CHECKPOINT_PATH=TO_BE_FILLED
-export HDFS_LOG_PATH=TO_BE_FILLED
+# export VLLM_ATTENTION_BACKEND=XFORMERS
+export HDFS_DATA_PATH="/scratch-ssd/$USER"
+export HDFS_MODEL_PATH="Qwen"
+# export HDFS_MODEL_PATH="/scratch-ssd/$USER/models"
+export HDFS_CHECKPOINT_PATH="/scratch-ssd/$USER/checkpoints"
+export HDFS_LOG_PATH="/scratch-ssd/$USER/logs"
 export RUN_NAME=verl-grpo
-export ARNOLD_WORKER_NUM=TO_BE_FILLED # number of nodes you want to use 
+export ARNOLD_WORKER_NUM=1
 
 
 # Default values
 TRAIN_BATCH_SIZE=256
-VAL_BATCH_SIZE=500
+# changed from 500
+VAL_BATCH_SIZE=256
 MAX_PROMPT_LENGTH=1024
 MAX_RESPONSE_LENGTH=3072
 LEARNING_RATE=5e-7
@@ -43,8 +45,8 @@ MODEL_NAME=Qwen2.5-Math-7B
 SAVE_FREQ=20
 TEST_FREQ=5
 REMOVE_CLIP=False
-ROLLOUT_TENSOR_MODEL_PARALLEL_SIZE=2
-MICRO_ROLLOUT_BATCH_SIZE=1024
+ROLLOUT_TENSOR_MODEL_PARALLEL_SIZE=1
+MICRO_ROLLOUT_BATCH_SIZE=256
 REMOVE_PREVIOUS_CKPT=False
 
 generate_suffix() {
@@ -168,9 +170,12 @@ ray job submit --address=${HEAD_IP}:${HEAD_PORT} \
   --entrypoint-num-cpus=1 \
   --runtime-env-json='{
         "working_dir": "'${WORKING_DIR}'",
+        "excludes": [".git", "slurm-*.out", "*.out", "data/**/*.jsonl"], 
         "env_vars": {
           "http_proxy": "",
-          "https_proxy": ""
+          "https_proxy": "",
+          "NCCL_P2P_DISABLE": "1",
+          "MASTER_ADDR": "127.0.0.1"
         }
     }' \
   -- python -m verl.trainer.main_ppo \
@@ -202,10 +207,12 @@ ray job submit --address=${HEAD_IP}:${HEAD_PORT} \
   actor_rollout_ref.rollout.gpu_memory_utilization=$ROLLOUT_GPU_MEMORY_UTIL \
   actor_rollout_ref.rollout.n=$ROLLOUT_N \
   actor_rollout_ref.rollout.enable_chunked_prefill=False \
+  +actor_rollout_ref.rollout.disable_custom_all_reduce=True \
+  actor_rollout_ref.rollout.free_cache_engine=False \
   actor_rollout_ref.rollout.max_num_batched_tokens=$max_num_batched_tokens \
   actor_rollout_ref.rollout.micro_rollout_batch_size=$MICRO_ROLLOUT_BATCH_SIZE \
   actor_rollout_ref.ref.log_prob_micro_batch_size=$LOG_PROB_MICRO_BATCH_SIZE \
-  actor_rollout_ref.ref.fsdp_config.param_offload=True \
+  actor_rollout_ref.ref.fsdp_config.param_offload=False \
   algorithm.kl_ctrl.kl_coef=$KL_COEF \
   critic.ppo_micro_batch_size_per_gpu=4 \
   trainer.critic_warmup=0 \
@@ -213,7 +220,7 @@ ray job submit --address=${HEAD_IP}:${HEAD_PORT} \
   trainer.project_name=$PROJECT_NAME \
   trainer.remove_previous_ckpt=$REMOVE_PREVIOUS_CKPT \
   trainer.experiment_name=$RUN_NAME \
-  trainer.n_gpus_per_node=8 \
+  trainer.n_gpus_per_node=4 \
   trainer.nnodes=$ARNOLD_WORKER_NUM \
   trainer.remove_clip=$REMOVE_CLIP \
   trainer.save_freq=$SAVE_FREQ \
