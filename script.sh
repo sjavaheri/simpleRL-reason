@@ -1,6 +1,6 @@
 #!/bin/bash
 #SBATCH --cpus-per-task=32
-#SBATCH --gres=gpu:a100:4
+#SBATCH --gres=gpu:4
 #SBATCH --mem=128G
 #SBATCH --partition=msc
 #SBATCH --job-name="simple-rl"
@@ -25,12 +25,12 @@ if [ ! -d "$VENV_DIR" ] || [ ! -f "$VENV_DIR/bin/python" ]; then
 
     # install the project dependecies 
     cd "$PROJECT_DIR"
-    uv pip install setuptools wheel packaging ninja
+    uv pip install "setuptools<70.0.0" wheel packaging ninja
      
     uv pip install torch==2.4.0 --index-url https://download.pytorch.org/whl/cu124
     uv pip install flash-attn --no-build-isolation
     uv pip install vllm==0.5.4
-    uv pip install pyairports pycountry
+    uv pip install git+https://github.com/ozeliger/pyairports.git pycountry
     uv pip install wandb
     uv pip install -e .
     uv pip install "click<8.1.8"
@@ -41,7 +41,7 @@ else
 
     # install the project dependecies 
     cd "$PROJECT_DIR"
-    uv pip install setuptools wheel packaging ninja
+    uv pip install "setuptools<70.0.0" wheel packaging ninja
      
     uv pip install torch==2.4.0 --index-url https://download.pytorch.org/whl/cu124
     uv pip install flash-attn --no-build-isolation
