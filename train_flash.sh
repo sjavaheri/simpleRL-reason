@@ -72,6 +72,9 @@ if [ ! -f "$DATA_DIR/test.parquet" ]; then
     wget -O "$DATA_DIR/test.parquet" https://huggingface.co/datasets/hkust-nlp/SimpleRL-Zoo-Data/resolve/main/simplelr_abel_level1to4/test.parquet
 fi
 
+# Catch termination signals (like scancel) to gracefully stop Ray and free GPUs
+trap "echo 'Caught termination signal, stopping Ray...'; ray stop; exit 0" EXIT SIGTERM SIGINT
+
 ray start --head --node-ip-address 127.0.0.1 --num-gpus 4 --temp-dir=/scratch-ssd/$USER/ray_tmp
 export HEAD_IP=127.0.0.1
 export HEAD_PORT=6379
