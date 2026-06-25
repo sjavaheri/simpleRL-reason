@@ -11,7 +11,7 @@ export VLLM_WORKER_MULTIPROC_METHOD="spawn"
 export WANDB_CACHE_DIR="/scratch-ssd/$USER/.cache/wandb"
 export WANDB_DIR="/scratch-ssd/$USER"
 export WANDB_API_KEY="ae5357c956169358a187cc70668d0b78265e6412"
-export HF_TOKEN="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"
+
 
 
 VENV_DIR="/scratch-ssd/$USER/simpleRL-reason"
