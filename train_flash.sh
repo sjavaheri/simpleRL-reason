@@ -1,8 +1,8 @@
 #!/bin/bash
 #SBATCH --cpus-per-task=32
 #SBATCH --gres=gpu:4
-#SBATCH --mem=128G
-#SBATCH --partition=msc
+#SBATCH --mem=300G
+#SBATCH --partition=h200
 #SBATCH --job-name="simple-rl"
 export HF_HOME=/scratch-ssd/$USER/.cache/huggingface
 export XDG_CACHE_HOME=/scratch-ssd/$USER/.cache
@@ -11,6 +11,7 @@ export VLLM_WORKER_MULTIPROC_METHOD="spawn"
 export WANDB_CACHE_DIR="/scratch-ssd/$USER/.cache/wandb"
 export WANDB_DIR="/scratch-ssd/$USER"
 export WANDB_API_KEY="ae5357c956169358a187cc70668d0b78265e6412"
+export HF_TOKEN="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"
 
 
 VENV_DIR="/scratch-ssd/$USER/simpleRL-reason"
@@ -29,6 +30,7 @@ if [ ! -d "$VENV_DIR" ] || [ ! -f "$VENV_DIR/bin/python" ]; then
      
     uv pip install torch==2.4.0 --index-url https://download.pytorch.org/whl/cu124
     uv pip install flash-attn --no-build-isolation
+    uv pip install xformers
     uv pip install vllm==0.5.4
     uv pip install git+https://github.com/ozeliger/pyairports.git pycountry
     uv pip install wandb
@@ -45,6 +47,7 @@ else
      
     uv pip install torch==2.4.0 --index-url https://download.pytorch.org/whl/cu124
     uv pip install flash-attn --no-build-isolation
+    uv pip install xformers
     uv pip install vllm==0.5.4
     uv pip install git+https://github.com/ozeliger/pyairports.git pycountry
     uv pip install wandb
@@ -58,15 +61,15 @@ mkdir -p /scratch-ssd/$USER/logs
 mkdir -p /scratch-ssd/$USER/checkpoints
 mkdir -p /scratch-ssd/$USER/models
 
-DATA_DIR="/scratch-ssd/$USER/simplelr_qwen_level1to4"
+DATA_DIR="/scratch-ssd/$USER/simplelr_abel_level1to4"
 mkdir -p "$DATA_DIR"
 
 if [ ! -f "$DATA_DIR/train.parquet" ]; then
-    wget -O "$DATA_DIR/train.parquet" https://huggingface.co/datasets/hkust-nlp/SimpleRL-Zoo-Data/resolve/main/simplelr_qwen_level1to4/train.parquet
+    wget -O "$DATA_DIR/train.parquet" https://huggingface.co/datasets/hkust-nlp/SimpleRL-Zoo-Data/resolve/main/simplelr_abel_level1to4/train.parquet
 fi
 
 if [ ! -f "$DATA_DIR/test.parquet" ]; then
-    wget -O "$DATA_DIR/test.parquet" https://huggingface.co/datasets/hkust-nlp/SimpleRL-Zoo-Data/resolve/main/simplelr_qwen_level1to4/test.parquet
+    wget -O "$DATA_DIR/test.parquet" https://huggingface.co/datasets/hkust-nlp/SimpleRL-Zoo-Data/resolve/main/simplelr_abel_level1to4/test.parquet
 fi
 
 ray start --head --node-ip-address 127.0.0.1 --num-gpus 4 --temp-dir=/scratch-ssd/$USER/ray_tmp
@@ -76,5 +79,4 @@ export HEAD_PORT=6379
 # use the right GPU connection
 export NCCL_P2P_DISABLE=1
 
-./train_grpo_math_tune_ray.sh --model_name Qwen2.5-0.5B --dataset_name simplelr_qwen_level1to4 --max_response_length 4096  --train_batch_size 1024 --rollout_n 8 --kl_loss_coef 0.0001 --entropy_coeffient 0.001 --rollout_gpu_memory_util 0.6 --rollout_tp 2 --save_freq 5 --micro_rollout_batch_size 64
-
+./train_grpo_math_tune_ray_flash.sh --model_name Qwen2.5-0.5B --dataset_name simplelr_abel_level1to4 --max_response_length 4096  --train_batch_size 1024 --rollout_n 8 --kl_loss_coef 0.0001 --entropy_coeffient 0.001 --rollout_gpu_memory_util 0.6 --rollout_tp 1 --save_freq 5 --micro_rollout_batch_size 64
