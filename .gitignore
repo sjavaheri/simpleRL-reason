@@ -121,3 +121,4 @@ examples/data_preprocess/converted_data
 examples/data_preprocess/data
 
 model_scope_model
+slurm* 

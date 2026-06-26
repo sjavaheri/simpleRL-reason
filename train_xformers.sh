@@ -2,8 +2,9 @@
 #SBATCH --cpus-per-task=32
 #SBATCH --gres=gpu:4
 #SBATCH --mem=300G
-#SBATCH --partition=h200
+#SBATCH --partition=msc
 #SBATCH --job-name="simple-rl"
+#SBATCH --time=1:00:00
 export HF_HOME=/scratch-ssd/$USER/.cache/huggingface
 export XDG_CACHE_HOME=/scratch-ssd/$USER/.cache
 export UV_CACHE_DIR=/scratch-ssd/$USER/.cache/uv
@@ -82,4 +83,4 @@ export HEAD_PORT=6379
 # use the right GPU connection
 export NCCL_P2P_DISABLE=1
 
-./train_grpo_math_tune_ray.sh --model_name Qwen2.5-0.5B --dataset_name simplelr_abel_level1to4 --max_response_length 4096  --train_batch_size 1024 --rollout_n 8 --kl_loss_coef 0.0001 --entropy_coeffient 0.001 --rollout_gpu_memory_util 0.6 --rollout_tp 1 --save_freq 5 --micro_rollout_batch_size 64
+./train_grpo_math_tune_ray.sh --model_name Qwen2.5-0.5B --dataset_name simplelr_abel_level1to4 --max_response_length 4096  --train_batch_size 1024 --rollout_n 8 --kl_loss_coef 0.0001 --entropy_coeffient 0.001 --rollout_gpu_memory_util 0.6 --rollout_tp 1 --save_freq 5 --micro_rollout_batch_size 256
