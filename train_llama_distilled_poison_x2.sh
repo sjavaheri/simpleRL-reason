@@ -2,9 +2,8 @@
 #SBATCH --cpus-per-task=32
 #SBATCH --gres=gpu:4
 #SBATCH --mem=300G
-#SBATCH --partition=msc
+#SBATCH --partition=h200
 #SBATCH --job-name="simple-rl"
-#SBATCH --time=1:00:00
 export HF_HOME=/scratch-ssd/$USER/.cache/huggingface
 export XDG_CACHE_HOME=/scratch-ssd/$USER/.cache
 export UV_CACHE_DIR=/scratch-ssd/$USER/.cache/uv
@@ -31,7 +30,7 @@ if [ ! -d "$VENV_DIR" ] || [ ! -f "$VENV_DIR/bin/python" ]; then
      
     uv pip install torch==2.4.0 --index-url https://download.pytorch.org/whl/cu124
     uv pip install flash-attn --no-build-isolation
-    uv pip install xformers
+    uv pip install xformers==0.0.27.post2
     uv pip install vllm==0.5.4
     uv pip install git+https://github.com/ozeliger/pyairports.git pycountry
     uv pip install wandb
@@ -48,7 +47,7 @@ else
      
     uv pip install torch==2.4.0 --index-url https://download.pytorch.org/whl/cu124
     uv pip install flash-attn --no-build-isolation
-    uv pip install xformers
+    uv pip install xformers==0.0.27.post2
     uv pip install vllm==0.5.4
     uv pip install git+https://github.com/ozeliger/pyairports.git pycountry
     uv pip install wandb
@@ -83,4 +82,4 @@ export HEAD_PORT=6379
 # use the right GPU connection
 export NCCL_P2P_DISABLE=1
 
-./train_grpo_math_tune_ray_2x.sh --model_name Qwen2.5-0.5B --dataset_name simplelr_abel_level1to4 --max_response_length 4096  --train_batch_size 1024 --rollout_n 8 --kl_loss_coef 0.0001 --entropy_coeffient 0.001 --rollout_gpu_memory_util 0.6 --rollout_tp 1 --save_freq 5 --micro_rollout_batch_size 128
+./train_grpo_math_tune_ray.sh --model_name Llama-3.2-3B-lam9 --dataset_name simplelr_abel_level1to4 --max_response_length 4096  --train_batch_size 1024 --rollout_n 8 --kl_loss_coef 0.0001 --entropy_coeffient 0.001 --rollout_gpu_memory_util 0.6 --rollout_tp 1 --save_freq 10 --micro_rollout_batch_size 64 --ppo_micro_batch_size 4

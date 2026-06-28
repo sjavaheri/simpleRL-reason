@@ -4,7 +4,6 @@
 #SBATCH --mem=300G
 #SBATCH --partition=h200
 #SBATCH --job-name="simple-rl"
-#SBATCH --time=2:00:00
 export HF_HOME=/scratch-ssd/$USER/.cache/huggingface
 export XDG_CACHE_HOME=/scratch-ssd/$USER/.cache
 export UV_CACHE_DIR=/scratch-ssd/$USER/.cache/uv
@@ -15,9 +14,9 @@ export WANDB_API_KEY="ae5357c956169358a187cc70668d0b78265e6412"
 
 
 
-VENV_DIR="/scratch-ssd/$USER/simpleRL-reason_flash"
-PROJECT_DIR="$HOME/projects/simpleRL-reason_flash"
-RESULTS_DIR="$HOME/projects/simpleRL-reason/results_flash"
+VENV_DIR="/scratch-ssd/$USER/simpleRL-reason"
+PROJECT_DIR="$HOME/projects/simpleRL-reason"
+RESULTS_DIR="$HOME/projects/simpleRL-reason/results"
 
 # create venv if it doesn't exist
 if [ ! -d "$VENV_DIR" ] || [ ! -f "$VENV_DIR/bin/python" ]; then
@@ -58,9 +57,9 @@ fi
 
 cd "$PROJECT_DIR"   
 
-mkdir -p /scratch-ssd/$USER/logs_flash  
-mkdir -p /scratch-ssd/$USER/checkpoints_flash
-mkdir -p /scratch-ssd/$USER/models_flash
+mkdir -p /scratch-ssd/$USER/logs
+mkdir -p /scratch-ssd/$USER/checkpoints
+mkdir -p /scratch-ssd/$USER/models
 
 DATA_DIR="/scratch-ssd/$USER/simplelr_abel_level1to4"
 mkdir -p "$DATA_DIR"
@@ -83,4 +82,4 @@ export HEAD_PORT=6379
 # use the right GPU connection
 export NCCL_P2P_DISABLE=1
 
-./train_grpo_math_tune_ray_flash.sh --model_name Qwen2.5-0.5B --dataset_name simplelr_abel_level1to4 --max_response_length 4096  --train_batch_size 1024 --rollout_n 8 --kl_loss_coef 0.0001 --entropy_coeffient 0.001 --rollout_gpu_memory_util 0.6 --rollout_tp 1 --save_freq 5 --micro_rollout_batch_size 64
+./train_grpo_math_tune_ray.sh --model_name Llama-3.2-3B-lam0 --dataset_name simplelr_abel_level1to4 --max_response_length 4096  --train_batch_size 1024 --rollout_n 8 --kl_loss_coef 0.0001 --entropy_coeffient 0.001 --rollout_gpu_memory_util 0.6 --rollout_tp 1 --save_freq 10 --micro_rollout_batch_size 64
