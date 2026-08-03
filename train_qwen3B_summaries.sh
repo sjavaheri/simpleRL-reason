@@ -1,7 +1,7 @@
 #!/bin/bash
 #SBATCH --cpus-per-task=32
-#SBATCH --gres=gpu:4
-#SBATCH --mem=300G
+#SBATCH --gres=gpu:8
+#SBATCH --mem=0
 #SBATCH --partition=h200
 #SBATCH --job-name="simple-rl"
 export HF_HOME=/scratch-ssd/$USER/.cache/huggingface
@@ -63,25 +63,25 @@ mkdir -p /scratch-ssd/$USER/logs
 mkdir -p /scratch-ssd/$USER/checkpoints
 mkdir -p /scratch-ssd/$USER/models
 
-DATA_DIR="/scratch-ssd/$USER/simplelr_abel_level1to4"
+DATA_DIR="/scratch-ssd/$USER/simplelr_qwen_level3to5"
 mkdir -p "$DATA_DIR"
 
 if [ ! -f "$DATA_DIR/train.parquet" ]; then
-    wget -O "$DATA_DIR/train.parquet" https://huggingface.co/datasets/hkust-nlp/SimpleRL-Zoo-Data/resolve/main/simplelr_abel_level1to4/train.parquet
+    wget -O "$DATA_DIR/train.parquet" https://huggingface.co/datasets/hkust-nlp/SimpleRL-Zoo-Data/resolve/main/simplelr_qwen_level3to5/train.parquet
 fi
 
 if [ ! -f "$DATA_DIR/test.parquet" ]; then
-    wget -O "$DATA_DIR/test.parquet" https://huggingface.co/datasets/hkust-nlp/SimpleRL-Zoo-Data/resolve/main/simplelr_abel_level1to4/test.parquet
+    wget -O "$DATA_DIR/test.parquet" https://huggingface.co/datasets/hkust-nlp/SimpleRL-Zoo-Data/resolve/main/simplelr_qwen_level3to5/test.parquet
 fi
 
 # Catch termination signals (like scancel) to gracefully stop Ray and free GPUs
 trap "echo 'Caught termination signal, stopping Ray...'; ray stop; exit 0" EXIT SIGTERM SIGINT
 
-ray start --head --node-ip-address 127.0.0.1 --num-gpus 4 --temp-dir=/scratch-ssd/$USER/ray_tmp
+ray start --head --node-ip-address 127.0.0.1 --num-gpus 8 --temp-dir=/scratch-ssd/$USER/ray_tmp
 export HEAD_IP=127.0.0.1
 export HEAD_PORT=6379
 
 # use the right GPU connection
 export NCCL_P2P_DISABLE=1
 
-./train_grpo_math_tune_ray.sh --model_name Llama-3.2-3B-lam0 --dataset_name simplelr_abel_level1to4 --max_response_length 4096  --train_batch_size 1024 --rollout_n 8 --kl_loss_coef 0.0001 --entropy_coeffient 0.001 --rollout_gpu_memory_util 0.6 --rollout_tp 1 --save_freq 10 --micro_rollout_batch_size 64 --ppo_micro_batch_size 8
+./train_grpo_math_tune_ray_qwen.sh --model_name Qwen2.5-3B_hard_14B_expand_3B_new_rs --dataset_name simplelr_qwen_level3to5 --max_response_length 2048 --train_batch_size 1024 --rollout_n 8 --kl_loss_coef 0.0001 --entropy_coeffient 0.001 --rollout_gpu_memory_util 0.75 --rollout_tp 1 --save_freq 10 --micro_rollout_batch_size 128 --ppo_micro_batch_size 8
