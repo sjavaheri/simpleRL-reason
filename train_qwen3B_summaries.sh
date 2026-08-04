@@ -81,7 +81,10 @@ ray start --head --node-ip-address 127.0.0.1 --num-gpus 8 --temp-dir=/scratch-ss
 export HEAD_IP=127.0.0.1
 export HEAD_PORT=6379
 
-# use the right GPU connection
-export NCCL_P2P_DISABLE=1
+# use the right GPU connection.
+# Overridable: `NCCL_P2P_DISABLE=0 ./train_qwen3B_summaries.sh` keeps NVLink P2P on,
+# which is much faster for FSDP all-gathers on an NVSwitch node. Disabling P2P forces
+# all collectives through host shared memory.
+export NCCL_P2P_DISABLE=${NCCL_P2P_DISABLE:-1}
 
 ./train_grpo_math_tune_ray_qwen.sh --model_name Qwen2.5-3B_hard_14B_expand_3B_new_rs --dataset_name simplelr_qwen_level3to5 --max_response_length 2048 --train_batch_size 1024 --rollout_n 8 --kl_loss_coef 0.0001 --entropy_coeffient 0.001 --rollout_gpu_memory_util 0.75 --rollout_tp 1 --save_freq 10 --micro_rollout_batch_size 128 --ppo_micro_batch_size 8

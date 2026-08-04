@@ -2,8 +2,16 @@
 
 USER_ENV=`whoami`
 set -x
-export NCCL_DEBUG=WARN
-export NCCL_SHM_DISABLE=1
+# NOTE: NCCL only reads env vars that are passed through the ray job runtime-env-json
+# below. Exporting them here only affects the `ray job submit` client, not the workers.
+# Set NCCL_DEBUG=INFO before invoking this script to get full NCCL logs on failure.
+export NCCL_DEBUG=${NCCL_DEBUG:-WARN}
+# NVLink SHARP multicast setup (cuMulticastCreate) fails with CUDA error 401
+# "the operation cannot be performed in the present state" on this 8xH200 node.
+# NCCL_P2P_DISABLE does NOT disable NVLS, so it must be turned off explicitly.
+export NCCL_P2P_DISABLE=${NCCL_P2P_DISABLE:-1}
+# Deliberately NOT propagating NCCL_SHM_DISABLE: with P2P also disabled it would
+# leave NCCL with no intra-node transport at all.
 export RAY_BACKEND_LOG_LEVEL=error
 export RAY_DEDUP_LOGS=1
 
@@ -170,11 +178,13 @@ ray job submit --address=${HEAD_IP}:${HEAD_PORT} \
   --entrypoint-num-cpus=1 \
   --runtime-env-json='{
         "working_dir": "'${WORKING_DIR}'",
-        "excludes": [".git", "slurm-*.out", "*.out", "data/**/*.jsonl"], 
+        "excludes": [".git", "slurm-*.out", "*.out", "data/**/*.jsonl"],
         "env_vars": {
           "http_proxy": "",
           "https_proxy": "",
-          "NCCL_P2P_DISABLE": "1",
+          "NCCL_P2P_DISABLE": "'$NCCL_P2P_DISABLE'",
+          "NCCL_NVLS_ENABLE": "0",
+          "NCCL_DEBUG": "'$NCCL_DEBUG'",
           "MASTER_ADDR": "127.0.0.1",
           "VLLM_ATTENTION_BACKEND":"XFORMERS",
           "OUTLINES_CACHE_DIR": "/scratch-ssd/'$USER'/.cache/outlines",
