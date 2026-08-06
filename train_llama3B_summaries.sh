@@ -88,4 +88,4 @@ export HEAD_PORT=6379
 export NCCL_P2P_DISABLE=${NCCL_P2P_DISABLE:-1}
 export RAY_OVERRIDE_JOB_RUNTIME_ENV=1
 
-./train_grpo_math_tune_ray_llama.sh --model_name Llama-3.2-3B-medium-14B --dataset_name simplelr_abel_level1to4 --max_response_length 2048 --train_batch_size 1024 --rollout_n 8 --kl_loss_coef 0.0001 --entropy_coeffient 0.001 --rollout_gpu_memory_util 0.75 --rollout_tp 1 --save_freq 10 --micro_rollout_batch_size 128 --ppo_micro_batch_size 8
+./train_grpo_math_tune_ray_llama.sh --model_name Llama-3.2-3B-medium-14B --dataset_name simplelr_abel_level1to4 --max_response_length 2048 --train_batch_size 1024 --rollout_n 8 --kl_loss_coef 0.0001 --entropy_coeffient 0.001 --rollout_gpu_memory_util 0.75 --rollout_tp 1 --save_freq 10 --micro_rollout_batch_size 128
