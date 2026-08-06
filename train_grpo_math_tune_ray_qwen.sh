@@ -180,6 +180,7 @@ ray job submit --address=${HEAD_IP}:${HEAD_PORT} \
         "working_dir": "'${WORKING_DIR}'",
         "excludes": [".git", "slurm-*.out", "*.out", "data/**/*.jsonl"],
         "env_vars": {
+          "RAY_OVERRIDE_JOB_RUNTIME_ENV": "1",
           "http_proxy": "",
           "https_proxy": "",
           "NCCL_P2P_DISABLE": "'$NCCL_P2P_DISABLE'",
